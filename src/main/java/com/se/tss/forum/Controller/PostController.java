@@ -1,8 +1,8 @@
 package com.se.tss.forum.Controller;
-
-import com.se.tss.Public.PostEntity;
-import com.se.tss.Public.SessionEntity;
-import com.se.tss.Public.UserEntity;
+import com.se.tss.forum.Entity.PostEntity;
+import com.se.tss.forum.Entity.SessionEntity;
+import com.se.tss.forum.Entity.UserEntity;
+import com.se.tss.forum.Models.Post;
 import com.se.tss.forum.Service.PostService;
 import com.se.tss.forum.Service.ReplyService;
 import com.se.tss.forum.Service.SessionService;
@@ -28,16 +28,20 @@ public class PostController {
 
     //创建帖子
     @RequestMapping(value = "bbs/post/create")
-    public PostEntity createPost(@RequestBody PostEntity p)
+    public String createPost(@RequestBody Post p)
     {
-        PostEntity post = new PostEntity();
-        post.setSession(p.getSession());
-        post.setTopic(p.getTopic());
-        post.setContent(p.getContent());
-        post.setCreator(p.getCreator());
-        post.setCreateTime(new Timestamp(System.currentTimeMillis()));
-        postService.save(post);
-        return post;
+        PostEntity postEntity = new PostEntity();
+        postEntity.setSession(sessionService.findByName(p.getSname()));
+        postEntity.setTopic(p.getTopic());
+        postEntity.setContent(p.getContent());
+        postEntity.setCreator(userService.findByName("user1"));
+        postEntity.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        postEntity.setClickCount(0);
+        postEntity.setReplyCount(0);
+        postEntity.setLastReplier(userService.findByName("user1"));
+        postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
+        postService.save(postEntity);
+        return "Success";
     }
     //查询某用户帖子
     @RequestMapping(value = "/bbs/post/user/{uid}")

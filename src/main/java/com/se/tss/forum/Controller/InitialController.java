@@ -1,6 +1,6 @@
 package com.se.tss.forum.Controller;
 
-import com.se.tss.Public.*;
+import com.se.tss.forum.Entity.*;
 import com.se.tss.forum.Service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

@@ -1,4 +1,4 @@
-package com.se.tss.Public;
+package com.se.tss.forum.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

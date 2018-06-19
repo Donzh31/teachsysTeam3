@@ -10,6 +10,6 @@ public class PageController {
     @RequestMapping("/index")
     public String helloHtml(HashMap<String, Object> map) {
         map.put("hello", "欢迎进入HTML页面");
-        return "/topic";
+        return "/wenzhang_xinwen_fabu";
     }
 }

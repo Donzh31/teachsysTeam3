@@ -1,6 +1,6 @@
 package com.se.tss.forum.Service;
 
-import com.se.tss.Public.UserEntity;
+import com.se.tss.forum.Entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

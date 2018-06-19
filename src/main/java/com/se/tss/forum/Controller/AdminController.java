@@ -1,7 +1,7 @@
 package com.se.tss.forum.Controller;
 
 import com.se.tss.forum.Service.AdminService;
-import com.se.tss.Public.Adm;
+import com.se.tss.forum.Entity.Adm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
