@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "session")
+@Table(name = "bbs_session")
 public class SessionEntity {
     @Id
     @GeneratedValue

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "message")
+@Table(name = "bbs_message")
 public class MessageEntity {
     @Id
     @GeneratedValue

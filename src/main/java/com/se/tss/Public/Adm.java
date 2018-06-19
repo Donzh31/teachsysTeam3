@@ -3,7 +3,7 @@ package com.se.tss.Public;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Adm")
+@Table(name="bbs_adm")
 public class Adm {
 
     @Id

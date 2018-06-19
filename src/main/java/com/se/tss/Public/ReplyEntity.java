@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "reply")
+@Table(name = "bbs_reply")
 @JsonIgnoreProperties(value = { "post", "creator"})
 public class ReplyEntity {
     @Id

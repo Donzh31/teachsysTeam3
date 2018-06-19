@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "bbs_user")
 public class UserEntity {
     @Id
     @GeneratedValue
@@ -58,7 +58,7 @@ public class UserEntity {
         return name;
     }
 
-    public void setName(String name) {
+    public void setN6ame(String name) {
         this.name = name;
     }
 

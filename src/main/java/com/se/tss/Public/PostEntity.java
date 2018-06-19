@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "post")
+@Table(name = "bbs_post")
 @JsonIgnoreProperties(value = { "session", "creator","lastReplier"})
 public class PostEntity {
     @Id
