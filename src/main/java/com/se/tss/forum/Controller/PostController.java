@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
+//@CrossOrigin
 @RestController
 public class PostController {
     @Autowired
@@ -28,7 +28,7 @@ public class PostController {
 
     //创建帖子
     @RequestMapping(value = "bbs/post/create")
-    public String createPost(@RequestBody Post p)
+    public PostEntity createPost(@RequestBody Post p)
     {
         PostEntity postEntity = new PostEntity();
         postEntity.setSession(sessionService.findByName(p.getSname()));
@@ -41,7 +41,7 @@ public class PostController {
         postEntity.setLastReplier(userService.findByName("user1"));
         postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
         postService.save(postEntity);
-        return "Success";
+        return postEntity;
     }
     //查询某用户帖子
     @RequestMapping(value = "/bbs/post/user/{uid}")

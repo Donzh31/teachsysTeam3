@@ -116,7 +116,7 @@
             $topic = $("#topicname"),
             $content = $("#topiccont");
         $("#submit").click(function(){
-            var url = "localhost:8080/bbs/post/create",
+            var url = "http://localhost:8080/bbs/post/create",
 				data = {};
             data.sname = $sname.val();
             data.topic = $topic.val();
@@ -126,19 +126,18 @@
 			$.ajax({
                 type: 'POST',
                 url: url,
-                data: data,
-                async: true,
+                data: JSON.stringify(data),
+                async: false,
                 dataType: 'json',
+                contentType:'application/json;charset=UTF-8',
                 success:function(data) {
+                    console.log(data)
                     //alert($.trim(data.response));
-                    if(data.response == 0) {
+                    if(data.pid > 0) {
                         alert('成功!');
                     } else {
                         alert('失败，请重试!');
                     }
-                },
-                fail:function(){
-                    console.log("failed");
                 }
             });
 		})
