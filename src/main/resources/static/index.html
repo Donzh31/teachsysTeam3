@@ -17,7 +17,7 @@
             get_topic_list("/bbs/post/session/心灵之约", "topic_list2");
             get_topic_list("/bbs/post/session/开怀一笑", "topic_list3");
             //get_topic_list("/bbs/post/hottopic", "hot_list");
-            //get_topic_list("/bbs/post/notice", "notice_list");
+            //get_notice_list("/bbs/post/notice/all", "notice_list");
         }
 
         function get_topic_list(url, id)
@@ -32,6 +32,24 @@
                     for (i in myObj) {
                         console.log(i);
                         x += "<li><span>" + myObj[i].createTime + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
+                    }
+                    document.getElementById(id).innerHTML = x;
+                }
+
+            }
+        }
+        function get_notice_list(url, id)
+        {
+            var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
+            request.open("GET",url);/*设置XHR对象的请求方法与路径*/
+            request.send(null);/*设置XHR对象不发送数据到服务器*/
+            request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
+                if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
+                    var myObj, i, x = "";
+                    myObj = eval('('+ request.responseText +')');
+                    for (i in myObj) {
+                        console.log(i);
+                        x += "<li><span>" + myObj[i].createTime + "</span><a href=\"notice.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
                 }
