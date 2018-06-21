@@ -72,6 +72,7 @@ a:hover {
 .H_health ul{}
 .H_health ul li{ background:url(../images/Icon_dot.jpg) no-repeat 5px center; padding-left:15px; line-height:26px;}
 .H_health ul li a{ color:#666;}
+.H_health ul li span{ float:right; color:#999;}
 
 .H_patient{ width:295px; height:310px; float:left; overflow:hidden; background:#FFF; padding:0 15px; margin-left:15px;}
 .H_patient dl{ display:block; padding:8px 0 15px;}
@@ -79,6 +80,7 @@ a:hover {
 .H_patient ul{}
 .H_patient ul li{ background:url(../images/Icon_dot.jpg) no-repeat 5px center; padding-left:15px; line-height:26px;}
 .H_patient ul li a{ color:#666;}
+.H_patient ul li span{ float:right; color:#999;}
 
 .H_interact{ width:295px; height:310px; float:right; overflow:hidden; background:#FFF; padding:0 15px;}
 .H_interact dl{ display:block; padding:8px 0 15px;}
@@ -86,6 +88,7 @@ a:hover {
 .H_interact ul{}
 .H_interact ul li{ background:url(../images/Icon_dot.jpg) no-repeat 5px center; padding-left:15px; line-height:26px;}
 .H_interact ul li a{ color:#666;}
+.H_interact ul li span{ float:right; color:#999;}
 
 .H_adLink{ height:80px; background:url(../images/H_adLink.jpg) no-repeat left top; position:relative;}
 .H_adLink a{ display:block; height:80px; width:140px; position:absolute;}
