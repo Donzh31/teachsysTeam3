@@ -56,12 +56,18 @@
                     var i, x = "";
                     var path = "";
                     myObj = eval('('+ request.responseText +')');
-                    if(myObj[1].sid == 1)
+                    if(myObj[1].sid == 1) {
                         path = "首页 > 教师答疑 > " + myObj[1].topic;
-                    else if(myObj[1].sid == 2)
+                        jQuery("#nav1").attr("class","onnav");
+                    }
+                    else if(myObj[1].sid == 2) {
                         path = "首页 > 心灵之约 > " + myObj[1].topic;
-                    else if(myObj[1].sid == 3)
+                        jQuery("#nav2").attr("class","onnav");
+                    }
+                    else if(myObj[1].sid == 3) {
                         path = "首页 > 开怀一笑 > " + myObj[1].topic;
+                        jQuery("#nav3").attr("class","onnav");
+                    }
                     for (i in myObj) {
                         x+= "<div class=\"space10\"></div>"+
                             "<div class=\"Content\">\n" +
@@ -87,6 +93,13 @@
             }
 
         }
+
+        function addsearchKey()
+        {
+
+            var objA=document.getElementById("searchbtn");
+            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+        }
     </script>
 
 </head>
@@ -100,7 +113,7 @@
         <!--a href="#">耳鼻咽喉头颈外科</a-->
         <!--a href="#">广州市职业卫生信息网</a-->
     </div>
-    <div class="search"><input name="" type="text" class="text" value="请输入关键字"/><a href="#" class="btn"></a></div>
+    <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
         <ul>
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
@@ -666,11 +679,6 @@
             }
         });
     })
-</script>
-
-<script type="text/javascript" language="javascript">
-    jQuery("#nav2").attr("class","onnav");
-    jQuery("#menu1").attr("class","acur");
 </script>
 <!--引入JS-->
 

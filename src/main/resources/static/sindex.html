@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>版块1</title>
+    <title>帖子列表</title>
     <!--link rel="stylesheet" href="css/base.css"-->
     <!--link rel="stylesheet" href="css/page.css"-->
     <link href="css/css_whir.css" rel="stylesheet" type="text/css" />
@@ -82,6 +82,62 @@
             }
 
         }
+<<<<<<< HEAD
+
+        function deletetopic(listid){
+            var url = "/bbs/post/delete/" + myObj[listid].pid;
+            var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
+            console.log(listid);
+            console.log(url);
+            request.open("GET",url);/*设置XHR对象的请求方法与路径*/
+            request.send(null);/*设置XHR对象不发送数据到服务器*/
+            request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
+                if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
+                    if(request.responseText=='1') {
+                        alert("删除成功！");
+                        window.location.href = thisurl;
+                    }
+                    else
+                        alert("删除失败，没有权限！");
+                }
+                else{
+                    alert("删除失败，网络错误！");
+                }
+
+            }
+        }
+        function deletenotice(listid){
+            var url = "/bbs/notice/delete/" + myObj[listid].pid;
+            var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
+            console.log(listid);
+            console.log(url);
+            request.open("GET",url);/*设置XHR对象的请求方法与路径*/
+            request.send(null);/*设置XHR对象不发送数据到服务器*/
+            request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
+                if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
+                    if(request.responseText=='1') {
+                        alert("删除成功！");
+                        window.location.href = thisurl;
+                    }
+                    else
+                        alert("删除失败，没有权限！");
+                }
+                else{
+                    alert("删除失败，网络错误！");
+                }
+
+            }
+        }
+
+        function addsearchKey()
+        {
+
+            var objA=document.getElementById("searchbtn");
+            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+        }
+
+=======
+>>>>>>> 70014c86003898cbe1fbf0937d09db40ba145f14
     </script>
 
 </head>
@@ -96,7 +152,7 @@
         <!--a href="#">耳鼻咽喉头颈外科</a-->
         <!--a href="#">广州市职业卫生信息网</a-->
     </div>
-    <div class="search"><input name="" type="text" class="text" value="请输入关键字"/><a href="#" class="btn"></a></div>
+    <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
         <ul>
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
@@ -123,7 +179,7 @@
     <div class="Mian-cont-wrap">
         <div class="defaultTab-T">
             <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
-                <tbody><tr><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">发帖时间</th><th class="t_4">操作</th></tr>
+                <tbody><tr><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">最近回复时间</th><th class="t_4">操作</th></tr>
                 </tbody></table>
         </div>
         <table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
