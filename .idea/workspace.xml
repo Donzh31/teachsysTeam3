@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0ce1068-14c6-48da-b14c-9ebc52f45d72" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/topic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/ReplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/PostEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/PostEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/ReplyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/ReplyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Models/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Models/Reply.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +18,8 @@
       <file leaf-file-name="topic.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+            <state relative-caret-position="410">
+              <caret line="668" column="39" lean-forward="true" selection-start-line="668" selection-start-column="39" selection-end-line="668" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -55,8 +45,8 @@
       <file leaf-file-name="ReplyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="353">
+              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -64,7 +54,7 @@
       <file leaf-file-name="ReplyEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="-331">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
@@ -73,8 +63,8 @@
       <file leaf-file-name="PostEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1786">
-              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+            <state relative-caret-position="415">
+              <caret line="191" column="5" lean-forward="true" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
               <folding>
                 <element signature="e#1922#1923#0" expanded="true" />
                 <element signature="e#1948#1949#0" expanded="true" />
@@ -128,8 +118,8 @@
       <file leaf-file-name="sindex.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="95" column="120" selection-start-line="95" selection-start-column="120" selection-end-line="95" selection-end-column="120" />
+            <state relative-caret-position="-19">
+              <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -146,8 +136,8 @@
       <file leaf-file-name="Reply.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="456">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -179,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSTopic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSPost.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSUser.java" />
@@ -229,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/sindex.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/notice.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/topic.html" />
       </list>
     </option>
@@ -315,7 +305,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tss" type="462c0819:PsiDirectoryNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tss" type="b2602c69:ProjectViewProjectNode" />
@@ -481,12 +471,12 @@
       <workItem from="1529595743786" duration="16109000" />
       <workItem from="1529647832440" duration="12695000" />
       <workItem from="1529686300901" duration="53000" />
-      <workItem from="1529686412295" duration="469000" />
+      <workItem from="1529686412295" duration="805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183916000" />
+    <option name="totallyTimeSpent" value="184252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -773,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-421">
@@ -787,17 +770,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="19">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="54" column="96" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1786">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        <state relative-caret-position="415">
+          <caret line="191" column="5" lean-forward="true" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
           <folding>
             <element signature="e#1922#1923#0" expanded="true" />
             <element signature="e#1948#1949#0" expanded="true" />
@@ -847,45 +858,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="-331">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="54" column="96" selection-start-line="54" selection-start-column="96" selection-end-line="54" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="95" column="120" selection-start-line="95" selection-start-column="120" selection-end-line="95" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        <state relative-caret-position="353">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="80" column="54" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+        <state relative-caret-position="410">
+          <caret line="668" column="39" lean-forward="true" selection-start-line="668" selection-start-column="39" selection-end-line="668" selection-end-column="39" />
         </state>
       </provider>
     </entry>

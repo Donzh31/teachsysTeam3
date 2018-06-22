@@ -27,7 +27,7 @@ public class ReplyController {
 
     //创建回帖
     //返回值：回帖的信息+序号
-    @RequestMapping(value = "bbs/post/reply")
+    @RequestMapping(value = "bbs/reply/create")
     public Reply createNotice(@RequestBody Reply r) {
         ReplyEntity replyEntity = new ReplyEntity();
         replyEntity.setCreator(userService.findByName("user1"));//userService.findByUid(r.getCreator_uid()));

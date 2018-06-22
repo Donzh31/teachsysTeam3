@@ -659,8 +659,8 @@
         var url = "http://localhost:8080/bbs/reply/create",
             data = {};
         //data.topic = myObj[1].topic;
-        data.content = $content.val();
-        data.post_pid = param.pid;
+        data.reply_content = $content.val();
+        data.pid = param.pid;
         console.log("success");
         console.log(data);
         $.ajax({
