@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e0ce1068-14c6-48da-b14c-9ebc52f45d72" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/NoticeController.java" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/InitialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/InitialController.java" afterDir="false" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/NoticeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/NoticeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Notice.java" afterDir="false" />
@@ -16,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/topic_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/topic_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/NoticeController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/PostController.class" beforeDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/NoticeEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Entity/NoticeEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Models/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Models/Notice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
@@ -24,6 +30,19 @@
       <change beforePath="$PROJECT_DIR$/target/classes/static/sindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sindex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/topic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/topic_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/topic_post.html" afterDir="false" />
+=======
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/notice_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/notice_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/topic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/topic_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/topic_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/sindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/sindex.html" afterDir="false" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,13 +71,75 @@
       <file leaf-file-name="NoticeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/NoticeController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="228">
               <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="-825">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+=======
+            <state relative-caret-position="19">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1212#1213#0" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1274#1275#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1488#1489#0" expanded="true" />
+                <element signature="e#1526#1527#0" expanded="true" />
+                <element signature="e#1565#1566#0" expanded="true" />
+                <element signature="e#1599#1600#0" expanded="true" />
+                <element signature="e#1654#1655#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+                <element signature="e#1776#1777#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1884#1885#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1957#1958#0" expanded="true" />
+                <element signature="e#2012#2013#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="e#2098#2099#0" expanded="true" />
+                <element signature="e#2134#2135#0" expanded="true" />
+                <element signature="e#2192#2193#0" expanded="true" />
+                <element signature="e#2242#2243#0" expanded="true" />
+                <element signature="e#2283#2284#0" expanded="true" />
+                <element signature="e#2317#2318#0" expanded="true" />
+                <element signature="e#2374#2375#0" expanded="true" />
+                <element signature="e#2420#2421#0" expanded="true" />
+                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2548#2549#0" expanded="true" />
+                <element signature="e#2594#2595#0" expanded="true" />
+                <element signature="e#2633#2634#0" expanded="true" />
+                <element signature="e#2667#2668#0" expanded="true" />
+                <element signature="e#2722#2723#0" expanded="true" />
+                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="e#2806#2807#0" expanded="true" />
+                <element signature="e#2835#2836#0" expanded="true" />
+                <element signature="e#2884#2885#0" expanded="true" />
+                <element signature="e#2920#2921#0" expanded="true" />
+              </folding>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="PostController.java" pinned="false" current-in-tab="false">
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="true">
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
@@ -66,24 +147,104 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="sindex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="topic.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="779">
               <caret line="452" column="13" lean-forward="true" selection-start-line="452" selection-start-column="13" selection-end-line="452" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="OncePerRequestFilter.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+=======
+      <file leaf-file-name="notice_post.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice_post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="148" column="9" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="sindex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="SessionEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/SessionEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-304">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+              <folding>
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#929#930#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1219#1220#0" expanded="true" />
+                <element signature="e#1252#1253#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+                <element signature="e#1349#1350#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1433#1434#0" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1547#1548#0" expanded="true" />
+=======
+      <file leaf-file-name="topic.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="649" column="27" lean-forward="true" selection-start-line="649" selection-start-column="27" selection-end-line="649" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notice.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+              </folding>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
@@ -91,31 +252,104 @@
       <file leaf-file-name="ThreadPoolExecutor.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-1467">
               <caret line="1134" column="31" lean-forward="true" selection-start-line="1134" selection-start-column="31" selection-end-line="1134" selection-end-column="31" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="76">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+=======
+            <state relative-caret-position="-5">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="notice_post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice_post.html">
           <provider selected="true" editor-type-id="text-editor" />
+=======
+      <file leaf-file-name="PostService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="76">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
         </entry>
       </file>
       <file leaf-file-name="Notice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Notice.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="76">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+=======
+            <state relative-caret-position="133">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+=======
+            <state relative-caret-position="1121">
+              <caret line="59" column="35" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="35" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
               <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="InitialController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/InitialController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="39" column="85" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+=======
+      <file leaf-file-name="PostEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topic_post.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+              </folding>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
             </state>
           </provider>
         </entry>
@@ -168,9 +402,16 @@
       <find>operateBtn</find>
       <find>defaultTable</find>
       <find>Mian-cont-btn</find>
+<<<<<<< HEAD
       <find>int</find>
+<<<<<<< HEAD
       <find>sname</find>
       <find>sid</find>
+=======
+=======
+      <find>topicname</find>
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
     </findStrings>
     <replaceStrings>
       <replace>（</replace>
@@ -211,6 +452,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/initial.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/CourseArrange/Controller/AdminController.java" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSSession.java" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSTopic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSPost.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/Public/BBSUser.java" />
@@ -243,9 +495,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PageController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index1.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/wenzhang_xinwen_fabu.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/resources/static/topic.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/page.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/css_whir.css" />
+=======
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/page.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/css_whir.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/notice.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/topic_post.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/notice_post.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/sindex.html" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Notice.java" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Session.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" />
@@ -261,7 +525,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/topic_post.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/NoticeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/resources/static/sindex.html" />
+=======
+=======
+        <option value="$PROJECT_DIR$/src/main/resources/static/topic.html" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
       </list>
     </option>
   </component>
@@ -282,10 +552,26 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="845" />
     <option name="height" value="775" />
+=======
+<<<<<<< HEAD
+    <option name="x" value="230" />
+    <option name="y" value="-14" />
+    <option name="width" value="838" />
+    <option name="height" value="551" />
+=======
+    <option name="x" value="535" />
+    <option name="width" value="839" />
+    <option name="height" value="775" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -353,7 +639,45 @@
               <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tss" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tss" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tss" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+            </path>
+            <path>
+              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tss" type="b2602c69:ProjectViewProjectNode" />
@@ -362,11 +686,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+=======
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,15 +833,30 @@
       <workItem from="1529393644149" duration="83000" />
       <workItem from="1529404864703" duration="12854000" />
       <workItem from="1529564410266" duration="17976000" />
+<<<<<<< HEAD
       <workItem from="1529600545337" duration="8053000" />
+=======
+      <workItem from="1529595743786" duration="15450000" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="166601000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="162643000" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="170040000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -519,6 +871,7 @@
       <window_info id="UI Designer" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" weight="0.32861635" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
@@ -535,7 +888,19 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+=======
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.324031" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+<<<<<<< HEAD
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
       <window_info anchor="bottom" id="Run" order="2" weight="0.39689922" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24383561" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -621,6 +986,140 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/Footer_bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/BgContent.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="35" column="58" lean-forward="true" selection-start-line="30" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/css_whir.css">
+=======
+    <entry file="file://$PROJECT_DIR$/tss.sql">
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7353">
+          <caret line="387" column="68" selection-start-line="387" selection-start-column="68" selection-end-line="387" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/sindex.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/NoticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/NoticeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/MessageEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/Adm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Notice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/context/request/ServletRequestAttributes.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -670,6 +1169,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/ReplyEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -699,12 +1199,27 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index1.html" />
+    <entry file="file://$USER_HOME$/test for jj/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/SessionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topic.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/wenzhang_xinwen_fabu.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/TssApplication.java">
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -713,6 +1228,10 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PageController.java">
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
@@ -733,6 +1252,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.29/tomcat-embed-websocket-8.5.29.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -741,6 +1261,9 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/MessageEntity.java">
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
@@ -782,6 +1305,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -790,6 +1314,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/InitialController.java">
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19">
           <caret line="14" column="112" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
@@ -902,11 +1430,41 @@
             <element signature="e#1433#1434#0" expanded="true" />
             <element signature="e#1499#1500#0" expanded="true" />
             <element signature="e#1547#1548#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/SessionService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/MessageService.java">
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="17" />
@@ -925,17 +1483,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="285">
           <caret line="33" column="115" selection-start-line="33" selection-start-column="115" selection-end-line="33" selection-end-column="115" />
+=======
+        <state relative-caret-position="133">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/css_whir.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+=======
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1599#1600#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2098#2099#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2317#2318#0" expanded="true" />
+            <element signature="e#2374#2375#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+            <element signature="e#2633#2634#0" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2722#2723#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2835#2836#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#2920#2921#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
           </folding>
         </state>
       </provider>
@@ -994,10 +1638,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="65">
           <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="196">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+>>>>>>> ca2d211396b36db80d29a8b02d606e7e1045fe24
           <folding>
             <element signature="imports" expanded="true" />
+=======
+        <state relative-caret-position="670">
+          <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/notice_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="148" column="9" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="649" column="27" lean-forward="true" selection-start-line="649" selection-start-column="27" selection-end-line="649" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+>>>>>>> fec5fcbe7af387e56e5e72cbf6ac77ea668ab254
           </folding>
         </state>
       </provider>
