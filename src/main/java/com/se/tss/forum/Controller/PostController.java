@@ -91,4 +91,17 @@ public class PostController {
         }
         return "Delete failed, you don't have authority";
     }
+    //搜索帖子
+    //
+    @RequestMapping(value = "/bbs/post/search/{key}")
+    public List<Post> searchPost(@PathVariable String key){
+        List<PostEntity> postEntities = postService.findByContentContainingOrderByLastReplyTimeDesc(key);
+        List<Post> posts = new ArrayList<>();
+        for(PostEntity pe: postEntities)
+        {
+            Post p = pe.getPost();
+            posts.add(p);
+        }
+        return posts;
+    }
 }

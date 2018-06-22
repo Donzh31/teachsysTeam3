@@ -13,23 +13,18 @@ public class Post {
     private Timestamp create_time;
     private Integer reply_count;
     private Integer click_count;
+    private Timestamp last_reply_time;
     private List<Reply> replys;
 
     public Post() {
     }
 
-    public Post(Integer pid, String topic, String content, String session_sid, String session_sname, Integer creator_uid, String creator_uname, Timestamp create_time, Integer reply_count, Integer click_count, List<Reply> replys) {
-        this.pid = pid;
-        this.topic = topic;
-        this.content = content;
-        this.session_sid = session_sid;
-        this.session_sname = session_sname;
-        this.creator_uid = creator_uid;
-        this.creator_uname = creator_uname;
-        this.create_time = create_time;
-        this.reply_count = reply_count;
-        this.click_count = click_count;
-        this.replys = replys;
+    public Timestamp getLast_reply_time() {
+        return last_reply_time;
+    }
+
+    public void setLast_reply_time(Timestamp last_reply_time) {
+        this.last_reply_time = last_reply_time;
     }
 
     public Integer getPid() {
