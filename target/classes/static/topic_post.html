@@ -70,10 +70,10 @@
 							<h5 class="pubtitle">帖子分类</h5>
 							<div class="pubselect">
 							<span class="select_ui"><span class="select_text_ui" style="min-width: 6em;">请选择分类</span><b class="select_arrow"></b>
-								<select id="sname">
-								<option value="教师答疑">教师答疑</option>
-								<option value="心灵之约">心灵之约</option>
-								<option value="开怀一笑">开怀一笑</option>
+								<select id="sid">
+								<option value="S001">教师答疑</option>
+								<option value="S002">心灵之约</option>
+								<option value="S003">开怀一笑</option>
 								</select>
 							</span>
 							</div>
@@ -101,21 +101,22 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
-        var $sname = $("#sname"),
+        var $sid = $("#sid"),
             $topic = $("#topicname"),
             $content = $("#topiccont");
         $("#submit").click(function(){
             var url = "http://localhost:8080/bbs/post/create",
                 data = {};
-            data.sname = $sname.val();
+            data.session_sid = $sid.val();
             data.topic = $topic.val();
             data.content = $content.val();
+            data = JSON.stringify(data);
             console.log("success")
             console.log(data)
             $.ajax({
                 type: 'POST',
                 url: url,
-                data: JSON.stringify(data),
+                data: data,
                 async: false,
                 dataType: 'json',
                 contentType:'application/json;charset=UTF-8',

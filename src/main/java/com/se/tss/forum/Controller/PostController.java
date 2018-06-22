@@ -1,18 +1,17 @@
 package com.se.tss.forum.Controller;
 import com.se.tss.forum.Entity.PostEntity;
 import com.se.tss.forum.Entity.SessionEntity;
-import com.se.tss.forum.Entity.UserEntity;
 import com.se.tss.forum.Models.Post;
 import com.se.tss.forum.Service.PostService;
-import com.se.tss.forum.Service.ReplyService;
 import com.se.tss.forum.Service.SessionService;
 import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 //@CrossOrigin
 @RestController
@@ -20,18 +19,17 @@ public class PostController {
     @Autowired
     SessionService sessionService;
     @Autowired
-    ReplyService replyService;
-    @Autowired
     PostService postService;
     @Autowired
     UserService userService;
 
     //创建帖子
+    //返回值：帖子序号
     @RequestMapping(value = "bbs/post/create")
-    public PostEntity createPost(@RequestBody Post p)
+    public Post createPost(@RequestBody Post p)
     {
         PostEntity postEntity = new PostEntity();
-        postEntity.setSession(sessionService.findByName(p.getSname()));
+        postEntity.setSession(sessionService.findBySid(p.getSession_sid()));
         postEntity.setTopic(p.getTopic());
         postEntity.setContent(p.getContent());
         postEntity.setCreator(userService.findByName("user1"));
@@ -41,25 +39,52 @@ public class PostController {
         postEntity.setLastReplier(userService.findByName("user1"));
         postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
         postService.save(postEntity);
-        return postEntity;
+        p.setPid(postEntity.getPid());
+        return p;
     }
-    //查询某用户帖子
-    @RequestMapping(value = "/bbs/post/user/{uid}")
-    public List<PostEntity> userPost(@PathVariable String uid){
-        UserEntity u = userService.getOne(uid);
-        List<PostEntity> postEntities = u.getCreatedPost();
-        return postEntities;
+    //查询特定帖子详细信息
+    @RequestMapping(value = "/bbs/post/find/{pid}")
+    public Post specPost(@PathVariable Integer pid){
+        PostEntity pe = postService.findByPid(pid);
+        Post p = pe.getPost();
+        return  p;
     }
     //查询某版块帖子
-    @RequestMapping(value = "/bbs/post/session/{sname}")
-    public List<PostEntity> sessionPost(@PathVariable String sname){
-        SessionEntity s = sessionService.findByName(sname);
-        List<PostEntity> postEntities = s.getPostEntities();
-        return postEntities;
+    @RequestMapping(value = "/bbs/post/session/{sid}")
+    public List<Post> sessionPost(@PathVariable String sid){
+        SessionEntity s = sessionService.findBySid(sid);
+        List<PostEntity> postEntities = postService.findAllBySessionOrderByCreateTimeDesc(s);// s.getPostEntities();
+        List<Post> posts = new ArrayList<>();
+        for(PostEntity pe: postEntities)
+        {
+           Post p = pe.getPost();
+           posts.add(p);
+        }
+        return posts;
     }
-    @RequestMapping(value = "/topic/{sid}")
-    public List<PostEntity> dispTopic(@PathVariable String sid){
-        Optional<SessionEntity> s = sessionService.findById(sid);
-        return s.get().getPostEntities();
+    //查询热门帖子
+    @RequestMapping(value = "/bbs/post/hot")
+    public List<Post> hotPost(){
+        Sort sort = new Sort(Sort.Direction.DESC, "clickCount");
+        List<PostEntity> pe = postService.findAll(sort);
+        List<Post> posts = new ArrayList<>();
+        for(int i = 0; i<10; i++)
+        {
+            Post p = pe.get(i).getPost();
+            posts.add(p);
+        }
+        return posts;
+    }
+    //删除帖子
+    //帖子ID，删除者ID
+    @RequestMapping(value = "/bbs/post/delete/{pid}/{uid}")
+    public String deletePost(@PathVariable Integer pid, @PathVariable Integer uid){
+        PostEntity pe = postService.findByPid(pid);
+        if(uid == pe.getCreator().getUid())
+        {
+            postService.delete(pe);
+            return "Delete succeed";
+        }
+        return "Delete failed, you don't have authority";
     }
 }

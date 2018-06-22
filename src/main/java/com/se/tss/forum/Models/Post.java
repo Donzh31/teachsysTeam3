@@ -4,32 +4,32 @@ import java.util.List;
 
 public class Post {
     private Integer pid;
-    private String sname;
     private String topic;
     private String content;
-    private Integer creatorId;
-    private Timestamp createTime;
-    private List<Integer> replyId;
-    private Integer replyCount;
-    private Integer clickCount;
-    private Integer lastReplyId;
-    private Timestamp lastReplyTime;
+    private String session_sid;
+    private String session_sname;
+    private Integer creator_uid;
+    private String creator_uname;
+    private Timestamp create_time;
+    private Integer reply_count;
+    private Integer click_count;
+    private List<Reply> replys;
 
     public Post() {
     }
 
-    public Post(Integer pid, String sname, String topic, String content, Integer creatorId) {
+    public Post(Integer pid, String topic, String content, String session_sid, String session_sname, Integer creator_uid, String creator_uname, Timestamp create_time, Integer reply_count, Integer click_count, List<Reply> replys) {
         this.pid = pid;
-        this.sname = sname;
         this.topic = topic;
         this.content = content;
-        this.creatorId = creatorId;
-        this.createTime = new Timestamp(System.currentTimeMillis());
-        //this.replyId = creatorId;
-        this.replyCount = 0;
-        this.clickCount = 0;
-        //this.lastReplyId = creatorId;
-        //this.lastReplyTime
+        this.session_sid = session_sid;
+        this.session_sname = session_sname;
+        this.creator_uid = creator_uid;
+        this.creator_uname = creator_uname;
+        this.create_time = create_time;
+        this.reply_count = reply_count;
+        this.click_count = click_count;
+        this.replys = replys;
     }
 
     public Integer getPid() {
@@ -38,14 +38,6 @@ public class Post {
 
     public void setPid(Integer pid) {
         this.pid = pid;
-    }
-
-    public String getSname() {
-        return sname;
-    }
-
-    public void setSname(String sname) {
-        this.sname = sname;
     }
 
     public String getTopic() {
@@ -64,59 +56,67 @@ public class Post {
         this.content = content;
     }
 
-    public Integer getCreatorId() {
-        return creatorId;
+    public String getSession_sid() {
+        return session_sid;
     }
 
-    public void setCreatorId(Integer creatorId) {
-        this.creatorId = creatorId;
+    public void setSession_sid(String session_sid) {
+        this.session_sid = session_sid;
     }
 
-    public Timestamp getCreateTime() {
-        return createTime;
+    public String getSession_sname() {
+        return session_sname;
     }
 
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
+    public void setSession_sname(String session_sname) {
+        this.session_sname = session_sname;
     }
 
-    public List<Integer> getReplyId() {
-        return replyId;
+    public Integer getCreator_uid() {
+        return creator_uid;
     }
 
-    public void setReplyId(List<Integer> replyId) {
-        this.replyId = replyId;
+    public void setCreator_uid(Integer creator_uid) {
+        this.creator_uid = creator_uid;
     }
 
-    public Integer getReplyCount() {
-        return replyCount;
+    public String getCreator_uname() {
+        return creator_uname;
     }
 
-    public void setReplyCount(Integer replyCount) {
-        this.replyCount = replyCount;
+    public void setCreator_uname(String creator_uname) {
+        this.creator_uname = creator_uname;
     }
 
-    public Integer getClickCount() {
-        return clickCount;
+    public Timestamp getCreate_time() {
+        return create_time;
     }
 
-    public void setClickCount(Integer clickCount) {
-        this.clickCount = clickCount;
+    public void setCreate_time(Timestamp create_time) {
+        this.create_time = create_time;
     }
 
-    public Integer getLastReplyId() {
-        return lastReplyId;
+    public Integer getReply_count() {
+        return reply_count;
     }
 
-    public void setLastReplyId(Integer lastReplyId) {
-        this.lastReplyId = lastReplyId;
+    public void setReply_count(Integer reply_count) {
+        this.reply_count = reply_count;
     }
 
-    public Timestamp getLastReplyTime() {
-        return lastReplyTime;
+    public Integer getClick_count() {
+        return click_count;
     }
 
-    public void setLastReplyTime(Timestamp lastReplyTime) {
-        this.lastReplyTime = lastReplyTime;
+    public void setClick_count(Integer click_count) {
+        this.click_count = click_count;
+    }
+
+    public List<Reply> getReplys() {
+        return replys;
+    }
+
+    public void setReplys(List<Reply> replys) {
+        this.replys = replys;
     }
 }

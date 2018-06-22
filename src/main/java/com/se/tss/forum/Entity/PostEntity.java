@@ -3,6 +3,8 @@ package com.se.tss.forum.Entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.se.tss.forum.Models.Post;
+import com.se.tss.forum.Models.Reply;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -146,5 +148,28 @@ public class PostEntity {
 
     public void setLastReplyTime(Timestamp lastReplyTime) {
         this.lastReplyTime = lastReplyTime;
+    }
+
+    public Post getPost()
+    {
+        Post p = new Post();
+        p.setPid(pid);
+        p.setTopic(topic);
+        p.setContent(content);
+        p.setCreate_time(createTime);
+        p.setClick_count(clickCount);
+        p.setCreator_uid(creator.getUid());
+        p.setCreator_uname(creator.getName());
+        p.setSession_sid(session.getSid());
+        p.setSession_sname(session.getName());
+        p.setReply_count(replyCount);
+        List<Reply> replies = new ArrayList<>();
+        for(ReplyEntity r: replyEntities)
+        {
+            Reply reply = r.getReply();
+            replies.add(reply);
+        }
+        p.setReplys(replies);
+        return p;
     }
 }
