@@ -107,7 +107,7 @@
         $("#submit").click(function(){
             var url = "http://localhost:8080/bbs/notice/create",
                 data = {};
-            data.notice = $notice.val();
+            data.topic = $notice.val();
             data.content = $content.val();
             console.log("success");
             console.log(data);
