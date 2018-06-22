@@ -2,6 +2,7 @@ package com.se.tss.forum.Controller;
 import com.se.tss.forum.Entity.PostEntity;
 import com.se.tss.forum.Entity.SessionEntity;
 import com.se.tss.forum.Models.Post;
+import com.se.tss.forum.Models.Reply;
 import com.se.tss.forum.Service.PostService;
 import com.se.tss.forum.Service.SessionService;
 import com.se.tss.forum.Service.UserService;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +47,10 @@ public class PostController {
     }
     //查询特定帖子详细信息
     @RequestMapping(value = "/bbs/post/find/{pid}")
-    public Post specPost(@PathVariable Integer pid){
+    public List<Reply> getReply(@PathVariable Integer pid){//HttpServletRequest request){
+        //String pid = request.getParameter("pid");
         PostEntity pe = postService.findByPid(pid);
-        Post p = pe.getPost();
+        List<Reply> p = pe.getReply();
         return  p;
     }
     //查询某版块帖子

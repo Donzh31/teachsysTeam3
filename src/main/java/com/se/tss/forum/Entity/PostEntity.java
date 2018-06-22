@@ -1,6 +1,5 @@
 package com.se.tss.forum.Entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.se.tss.forum.Models.Post;
@@ -171,5 +170,24 @@ public class PostEntity {
         }
         p.setReplys(replies);
         return p;
+    }
+    public List<Reply> getReply()
+    {
+        Reply head = new Reply();
+        List<Reply> replies = new ArrayList<>();
+        head.setReply_content(content);
+        head.setTopic(topic);
+        head.setPid(pid);
+        head.setUid(creator.getUid());
+        head.setUname(creator.getName());
+        head.setSid(session.getSid());
+        head.setReply_time(createTime);
+        replies.add(head);
+        for(ReplyEntity r: replyEntities)
+        {
+            Reply reply = r.getReply();
+            replies.add(reply);
+        }
+        return replies;
     }
 }

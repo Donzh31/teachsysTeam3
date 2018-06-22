@@ -77,12 +77,13 @@ public class ReplyEntity {
     {
         Reply reply = new Reply();
         reply.setRid(rid);
-        reply.setContent(content);
+        reply.setPid(post.getPid());
+        reply.setReply_content(content);
+        reply.setTopic(post.getTopic());
+        reply.setUid(creator.getUid());
+        reply.setUname(creator.getName());
+        reply.setSid(post.getSession().getSid());
         reply.setReply_time(replyTime);
-        reply.setPost_pid(post.getPid());
-        reply.setPost_ptopic(post.getTopic());
-        reply.setCreator_uid(creator.getUid());
-        reply.setCreator_uname(creator.getName());
         return reply;
     }
 }

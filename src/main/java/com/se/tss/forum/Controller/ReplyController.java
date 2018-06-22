@@ -27,13 +27,13 @@ public class ReplyController {
 
     //创建回帖
     //返回值：回帖的信息+序号
-    @RequestMapping(value = "bbs/reply/create")
+    @RequestMapping(value = "bbs/post/reply")
     public Reply createNotice(@RequestBody Reply r) {
         ReplyEntity replyEntity = new ReplyEntity();
         replyEntity.setCreator(userService.findByName("user1"));//userService.findByUid(r.getCreator_uid()));
-        replyEntity.setContent(r.getContent());
+        replyEntity.setContent(r.getReply_content());
         replyEntity.setReplyTime(new Timestamp(System.currentTimeMillis()));
-        replyEntity.setPost(postService.findByPid(r.getPost_pid()));
+        replyEntity.setPost(postService.findByPid(r.getPid()));
         replyService.save(replyEntity);
         r.setRid(replyEntity.getRid());
         return r;
