@@ -19,6 +19,47 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <script>
+        var myObj;
+        var param;
+        var getParam = function () {
+            try{
+                var url = window.location.href;
+                var result = url.split("?")[1];
+                var keyValue = result.split("&");
+                var obj = {};
+                for (var i = 0; i<keyValue.length; i++) {
+                    var item = keyValue[i].split("=");
+                    obj[item[0]] = item[1];
+                }
+                return obj;}catch(e){
+                console.warn("There has no param value!");
+            }
+        };
+
+        window.onload = function () {
+            param = getParam();
+            console.log(param);
+            console.log(param.pid);
+            var url = "/bbs/notice/find/"+param.pid;
+            var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
+            request.open("GET",url);/*设置XHR对象的请求方法与路径*/
+            request.send(null);/*设置XHR对象不发送数据到服务器*/
+            request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
+                if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
+                    var i, x = "";
+                    var path = "";
+                    myObj = eval('('+ request.responseText +')');
+                    console.log(myObj);
+                    document.getElementById("noticename").innerHTML = myObj.topic;
+                    document.getElementById("noticetopic").innerHTML = myObj.topic;
+                    document.getElementById("noticecreator").innerHTML = "<a href=\"person_topic.html?tuserid="+myObj.creator_uid+"\">"+myObj.creator_uname+"</a>";
+                    document.getElementById("noticecontent").innerHTML = myObj.content;
+                    document.getElementById("createtime").innerHTML = myObj.create_time;
+                }
+
+            }
+
+        }
 
 
         function addsearchKey()
@@ -27,7 +68,7 @@
             var objA=document.getElementById("searchbtn");
             objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
         }
-    </script>>
+    </script>
 
 </head>
 <body>
@@ -65,13 +106,13 @@
 <div class="H193"><span class="leftBg"></span><span class="rightBg"></span></div-->
 <div class="space35"></div>
 <div class = "Content1">
-    <dl class="TopicPath">首页 > 论坛公告 > <span>公告1</span></dl>
+    <dl class="TopicPath">首页 > 论坛公告 > <span id="noticename">公告1</span></dl>
 </div>
 <div class="space25"></div>
 
 <div class="Content2">
     <div class="space10"></div>
-    <h2 style="padding:10px">公告标题</h2>
+    <h2 style="padding:10px" id="noticetopic">公告标题</h2>
     <div class="space10"></div>
 </div>
 <div>
@@ -81,8 +122,8 @@
         <!--左边-->
         <div class="Sidebar">
             <p align="center"><img src="images/temp/Pic06.jpg" /></p>
-            <h3 align="center">教师1</h3>
-            <h3 align="center">2018/06/21 22:00</h3>
+            <h3 align="center" id="noticecreator"><a href="person_topic.html">教师1</a></h3>
+            <h3 align="center" id="creatertime">2018/06/21 22:00</h3>
             <div class="clear"></div>
 
         </div>
@@ -92,7 +133,7 @@
             <div class="mianContent" style="padding:30px 20px">
                 <!--Star-->
                 <!--<p align="center"><img src="images/temp/Pic06.jpg" /></p>-->
-                <p>内容一啦请了一批具有权威的、有丰富临床经验的教授为主任导师。改革
+                <p id="noticecontent">内容一啦请了一批具有权威的、有丰富临床经验的教授为主任导师。改革
                     开放以来，医院一直与国外进行科技合作，多项成果受奖，多次被评为广州市卫生系统最佳服务单位、文明单位。
                     内容一啦请了一批具有权威的、有丰富临床经验的教授为主任导师。改革
                     开放以来，医院一直与国外进行科技合作，多项成果受奖，多次被评为广州市卫生系统最佳服务单位、文明单位。

@@ -25,6 +25,7 @@
          */
         var myObj;
         var param;
+        var thisUrl = window.location.href;
         var getParam = function () {
             try{
                 var url = window.location.href;
@@ -56,15 +57,15 @@
                     var i, x = "";
                     var path = "";
                     myObj = eval('('+ request.responseText +')');
-                    if(myObj[1].sid == 1) {
+                    if(myObj[1].sid == 'S001') {
                         path = "首页 > 教师答疑 > " + myObj[1].topic;
                         jQuery("#nav1").attr("class","onnav");
                     }
-                    else if(myObj[1].sid == 2) {
+                    else if(myObj[1].sid == 'S002') {
                         path = "首页 > 心灵之约 > " + myObj[1].topic;
                         jQuery("#nav2").attr("class","onnav");
                     }
-                    else if(myObj[1].sid == 3) {
+                    else if(myObj[1].sid == 'S003') {
                         path = "首页 > 开怀一笑 > " + myObj[1].topic;
                         jQuery("#nav3").attr("class","onnav");
                     }
@@ -72,12 +73,12 @@
                         x+= "<div class=\"space10\"></div>"+
                             "<div class=\"Content\">\n" +
                             "    <div class=\"Sidebar\">\n" +
-                            "        <h3 align=\"center\">"+myObj.user+"</h3>\n" +
+                            "        <h3 align=\"center\"><a href=\"person_topic.html?tuserid="+myObj[i].uid+"\">"+myObj[i].uname+"</a></h3>\n" +
                             "        <div class=\"clear\"></div>\n" +
                             "    </div>\n" +
                             "    <div class=\"RightSidebar\">\n" +
                             "        <div class=\"mianContent\">\n" +
-                            "            <p>"+myObj.content+"</p>\n" +
+                            "            <p>"+myObj.reply_content+"</p>\n" +
                             "            <div class=\"clear\"></div>\n" +
                             "        </div>\n" +
                             "        <div class=\"clear\"></div>\n" +
@@ -154,7 +155,7 @@
         <!--左边-->
         <div class="Sidebar">
             <p align="center"><img src="images/temp/Pic06.jpg" /></p>
-            <h3 align="center">用户1</h3>
+            <h3 align="center"><a href="person_topic.html">用户1</a></h3>
             <div class="clear"></div>
 
         </div>
@@ -213,7 +214,7 @@
         <!--左边-->
         <div class="Sidebar">
             <p align="center"><img src="images/temp/Pic06.jpg" /></p>
-            <h3 align="center">用户1</h3>
+            <h3 align="center"><a href="person_topic.html">用户1</a></h3>
             <div class="clear"></div>
 
         </div>
@@ -242,7 +243,7 @@
         <!--左边-->
         <div class="Sidebar">
             <p align="center"><img src="images/temp/Pic06.jpg" /></p>
-            <h3 align="center">用户1</h3>
+            <h3 align="center"><a href="person_topic.html">用户1</a></h3>
             <div class="clear"></div>
 
         </div>
@@ -655,10 +656,11 @@
     var $content = $("#replycont");
     $("#reply").click(function(){
         console.log('enter');
-        var url = "http://localhost:8080/bbs/post/reply/"+param.pid,
+        var url = "http://localhost:8080/bbs/reply/create",
             data = {};
         //data.topic = myObj[1].topic;
         data.content = $content.val();
+        data.post_pid = param.pid;
         console.log("success");
         console.log(data);
         $.ajax({
@@ -673,6 +675,7 @@
                 //alert($.trim(data.response));
                 if(data.rid > 0) {
                     alert('回复成功!');
+                    $(location).attr('href', thisUrl);
                 } else {
                     alert('失败，请重试!');
                 }
