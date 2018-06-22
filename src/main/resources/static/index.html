@@ -56,6 +56,13 @@
 
             }
         }
+
+        function addsearchKey()
+        {
+
+            var objA=document.getElementById("searchbtn");
+            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+        }
     </script>
 </head>
 <body>
@@ -67,7 +74,7 @@
     <div class="frCont">
         <a href="#">教务管理系统</a><div id = "S1"></div>
     </div>
-    <div class="search"><input name="" type="text" class="text" value="请输入关键字"/><a href="#" class="btn"></a></div>
+    <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
         <ul>
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
