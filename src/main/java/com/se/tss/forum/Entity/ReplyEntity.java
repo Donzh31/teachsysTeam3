@@ -79,6 +79,8 @@ public class ReplyEntity {
         reply.setRid(rid);
         reply.setContent(content);
         reply.setReply_time(replyTime);
+        reply.setPost_pid(post.getPid());
+        reply.setPost_ptopic(post.getTopic());
         reply.setCreator_uid(creator.getUid());
         reply.setCreator_uname(creator.getName());
         return reply;

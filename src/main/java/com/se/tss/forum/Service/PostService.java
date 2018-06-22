@@ -9,5 +9,6 @@ import java.util.List;
 
 public interface PostService extends JpaRepository<PostEntity, String> {
     PostEntity findByTopic(String topic);
+    PostEntity findByPid(Integer pid);
     List<PostEntity> findAllBySessionOrderByCreateTimeDesc(SessionEntity s);
 }

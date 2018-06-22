@@ -6,18 +6,28 @@ public class Reply {
     private Integer rid;
     private String content;
     private Timestamp reply_time;
+    private Integer post_pid;
+    private String post_ptopic;
     private Integer creator_uid;
     private String creator_uname;
 
     public Reply() {
     }
 
-    public Reply(Integer rid, String content, Timestamp reply_time, Integer creator_uid, String creator_uname) {
-        this.rid = rid;
-        this.content = content;
-        this.reply_time = reply_time;
-        this.creator_uid = creator_uid;
-        this.creator_uname = creator_uname;
+    public Integer getPost_pid() {
+        return post_pid;
+    }
+
+    public void setPost_pid(Integer post_pid) {
+        this.post_pid = post_pid;
+    }
+
+    public String getPost_ptopic() {
+        return post_ptopic;
+    }
+
+    public void setPost_ptopic(String post_ptopic) {
+        this.post_ptopic = post_ptopic;
     }
 
     public Integer getRid() {

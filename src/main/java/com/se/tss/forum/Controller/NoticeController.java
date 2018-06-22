@@ -5,6 +5,7 @@ import com.se.tss.forum.Models.Notice;
 import com.se.tss.forum.Service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,5 +49,24 @@ public class NoticeController {
             notices.add(n);
         }
         return notices;
+    }
+    //查询特定公告详细信息
+    @RequestMapping(value = "/bbs/notice/find/{nid}")
+    public Notice specPost(@PathVariable Integer nid){
+        NoticeEntity ne = noticeService.findByNid(nid);
+        Notice n = ne.getNotice();
+        return  n;
+    }
+    //删除公告
+    //公告ID，删除者ID
+    @RequestMapping(value = "/bbs/notice/delete/{nid}/{uid}")
+    public String deletePost(@PathVariable Integer nid, @PathVariable Integer uid){
+        NoticeEntity ne = noticeService.findByNid(nid);
+        if(uid == ne.getCreator().getUid())
+        {
+            noticeService.delete(ne);
+            return "Delete succeed";
+        }
+        return "Delete failed, you don't have authority";
     }
 }
