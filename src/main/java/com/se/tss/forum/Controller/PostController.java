@@ -46,10 +46,13 @@ public class PostController {
         return p;
     }
     //查询特定帖子详细信息
+    //click_count++
     @RequestMapping(value = "/bbs/post/find/{pid}")
     public List<Reply> getReply(@PathVariable Integer pid){//HttpServletRequest request){
         //String pid = request.getParameter("pid");
         PostEntity pe = postService.findByPid(pid);
+        pe.setClickCount(pe.getClickCount()+1);
+        postService.save(pe);
         List<Reply> p = pe.getReply();
         return  p;
     }
@@ -103,10 +106,10 @@ public class PostController {
         }
         return posts;
     }
-  /*  //用户的发帖
+    //得到某用户的发帖
     @RequestMapping(value = "/bbs/post/user/{uid}")
     public List<Post> searchPost(@PathVariable Integer uid){
-        List<PostEntity> postEntities = postService.findByCreatorOrderByCreateTimeDesc(userService.);
+        List<PostEntity> postEntities = postService.findByCreatorOrderByCreateTimeDesc(userService.findByUid(uid));
         List<Post> posts = new ArrayList<>();
         for(PostEntity pe: postEntities)
         {
@@ -114,5 +117,5 @@ public class PostController {
             posts.add(p);
         }
         return posts;
-    }*/
+    }
 }

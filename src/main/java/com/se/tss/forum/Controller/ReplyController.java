@@ -9,11 +9,14 @@ import com.se.tss.forum.Service.PostService;
 import com.se.tss.forum.Service.ReplyService;
 import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 //@CrossOrigin
 @RestController
@@ -38,5 +41,16 @@ public class ReplyController {
         r.setRid(replyEntity.getRid());
         return r;
     }
-
+    //得到某用户的回帖
+    @RequestMapping(value = "/bbs/reply/user/{uid}")
+    public List<Reply> searchPost(@PathVariable Integer uid){
+        List<ReplyEntity> replyEntities = replyService.findByCreatorOrderByReplyTimeDesc(userService.findByUid(uid));
+        List<Reply> replies = new ArrayList<>();
+        for(ReplyEntity re: replyEntities)
+        {
+            Reply r = re.getReply();
+            replies.add(r);
+        }
+        return replies;
+    }
 }

@@ -163,13 +163,6 @@ public class PostEntity {
         p.setSession_sname(session.getName());
         p.setLast_reply_time(lastReplyTime);
         p.setReply_count(replyCount);
-        List<Reply> replies = new ArrayList<>();
-        for(ReplyEntity r: replyEntities)
-        {
-            Reply reply = r.getReply();
-            replies.add(reply);
-        }
-        p.setReplys(replies);
         return p;
     }
     public List<Reply> getReply()

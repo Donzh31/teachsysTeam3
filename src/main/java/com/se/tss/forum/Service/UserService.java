@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserService extends JpaRepository<UserEntity, String>{
     UserEntity findByName(String name);
+    UserEntity findByUid(Integer uid);
 }
