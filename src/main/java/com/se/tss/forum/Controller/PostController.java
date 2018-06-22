@@ -8,6 +8,7 @@ import com.se.tss.forum.Service.ReplyService;
 import com.se.tss.forum.Service.SessionService;
 import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
@@ -30,10 +31,10 @@ public class PostController {
     //创建帖子
     //返回值：帖子序号
     @RequestMapping(value = "bbs/post/create")
-    public Integer createPost(@RequestBody Post p)
+    public Post createPost(@RequestBody Post p)
     {
         PostEntity postEntity = new PostEntity();
-        postEntity.setSession(sessionService.getOne(p.getSession_sid().toString()));
+        postEntity.setSession(sessionService.findBySid(p.getSession_sid()));
         postEntity.setTopic(p.getTopic());
         postEntity.setContent(p.getContent());
         postEntity.setCreator(userService.findByName("user1"));
@@ -43,7 +44,8 @@ public class PostController {
         postEntity.setLastReplier(userService.findByName("user1"));
         postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
         postService.save(postEntity);
-        return postEntity.getPid();
+        p.setPid(postEntity.getPid());
+        return p;
     }
     //查询某用户帖子
     @RequestMapping(value = "/bbs/post/user/{uid}")
@@ -55,8 +57,9 @@ public class PostController {
     //查询某版块帖子
     @RequestMapping(value = "/bbs/post/session/{sid}")
     public List<Post> sessionPost(@PathVariable String sid){
+        Sort sort = new Sort(Sort.Direction.DESC, "createTime");
         SessionEntity s = sessionService.findBySid(sid);
-        List<PostEntity> postEntities = s.getPostEntities();
+        List<PostEntity> postEntities = postService.findAllBySessionOrderByCreateTimeDesc(s);// s.getPostEntities();
         List<Post> posts = new ArrayList<>();
         for(PostEntity pe: postEntities)
         {

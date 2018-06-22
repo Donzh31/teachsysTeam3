@@ -13,9 +13,9 @@
     <![endif]-->
     <script type="text/javascript">
         window.onload = function() { /*设置在页面加载完后执行以下js代码*/
-            get_topic_list("/bbs/post/session/教师答疑", "topic_list1");
-            get_topic_list("/bbs/post/session/心灵之约", "topic_list2");
-            get_topic_list("/bbs/post/session/开怀一笑", "topic_list3");
+            get_topic_list("/bbs/post/session/S001", "topic_list1");
+            get_topic_list("/bbs/post/session/S002", "topic_list2");
+            get_topic_list("/bbs/post/session/S003", "topic_list3");
             //get_topic_list("/bbs/post/hottopic", "hot_list");
             //get_topic_list("/bbs/post/notice", "notice_list");
         }
@@ -31,7 +31,7 @@
                     myObj = eval('('+ request.responseText +')');
                     for (i in myObj) {
                         console.log(i);
-                        x += "<li><span>" + myObj[i].createTime + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
+                        x += "<li><span>" + myObj[i].create_time + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
                 }

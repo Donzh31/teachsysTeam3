@@ -47,16 +47,16 @@
             var url = "/bbs/post/session/";
             var id = "topiclist"
             if(param.sid == 1) {
-                url += "教师答疑";
+                url += "S001";
                 jQuery("#nav1").attr("class","onnav");
                 //console.log(url);
             }
             else if(param.sid == 2) {
-                url += "心灵之约";
+                url += "S002";
                 jQuery("#nav2").attr("class","onnav");
             }
             else if(param.sid == 3) {
-                url += "开怀一笑";
+                url += "S003";
                 jQuery("#nav3").attr("class","onnav");
             }
             var request = new XMLHttpRequest();/*用new创建一个XHR对象*/

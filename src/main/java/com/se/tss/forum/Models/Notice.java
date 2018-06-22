@@ -7,6 +7,7 @@ public class Notice {
     private String topic;
     private String content;
     private Integer creator_uid;
+    private String creator_uname;
     private Timestamp create_time;
     private Timestamp modified_time;
 
@@ -43,6 +44,14 @@ public class Notice {
 
     public void setModified_time(Timestamp modified_time) {
         this.modified_time = modified_time;
+    }
+
+    public String getCreator_uname() {
+        return creator_uname;
+    }
+
+    public void setCreator_uname(String creator_uname) {
+        this.creator_uname = creator_uname;
     }
 
     public String getTopic() {
