@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0ce1068-14c6-48da-b14c-9ebc52f45d72" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Controller/PostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/se/tss/forum/Service/PostService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="97" column="75" selection-start-line="97" selection-start-column="75" selection-end-line="97" selection-end-column="75" />
+            <state relative-caret-position="258">
+              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_result.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/search_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -60,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="228">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,15 +150,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topic_post.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/topic_post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Reply.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Reply.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -220,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/notice_post.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/topic_post.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/search_result.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/person_topic.html" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/sindex.html" />
@@ -230,8 +225,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/ReplyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Entity/PostEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Models/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/search_result.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java" />
       </list>
     </option>
   </component>
@@ -327,26 +323,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tss" type="462c0819:PsiDirectoryNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tss" type="462c0819:PsiDirectoryNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tss" type="462c0819:PsiDirectoryNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,15 +339,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teachsysTeam3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -503,12 +470,12 @@
       <workItem from="1529595743786" duration="16109000" />
       <workItem from="1529647832440" duration="12695000" />
       <workItem from="1529686300901" duration="53000" />
-      <workItem from="1529686412295" duration="1820000" />
+      <workItem from="1529686412295" duration="2415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185267000" />
+    <option name="totallyTimeSpent" value="185862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -766,7 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/search_result.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/person_topic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2584">
@@ -902,20 +868,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/search_result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="97" column="75" selection-start-line="97" selection-start-column="75" selection-end-line="97" selection-end-column="75" />
+        <state relative-caret-position="589">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Service/PostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="228">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/se/tss/forum/Controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
         </state>
       </provider>
     </entry>
