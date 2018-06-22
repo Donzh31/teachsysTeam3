@@ -34,9 +34,9 @@ public class InitialController {
         userService.save(new UserEntity("user2", "user2", null, null, null, null, null, null));
         UserEntity user1 = userService.findByName("user1");
         Timestamp now = new Timestamp(System.currentTimeMillis());
-        sessionService.save(new SessionEntity("教师答疑", "您在课程、作业上遇到的问题，可以在本版块向老师提问", 0, 0));
-        sessionService.save(new SessionEntity("心灵之约", "您在生活、情感上遇到的问题，可以在本版块进行吐槽", 0, 0));
-        sessionService.save(new SessionEntity("开怀一笑", "您在任何地方发现的一些欢乐，不放在本版块分享给大家", 0, 0));
+        sessionService.save(new SessionEntity("S001","教师答疑", "您在课程、作业上遇到的问题，可以在本版块向老师提问", 0, 0,null));
+        sessionService.save(new SessionEntity("S002","心灵之约", "您在生活、情感上遇到的问题，可以在本版块进行吐槽", 0, 0,null));
+        sessionService.save(new SessionEntity("S003","开怀一笑", "您在任何地方发现的一些欢乐，不放在本版块分享给大家", 0, 0,null));
         postService.save(new PostEntity(sessionService.findByName("教师答疑"), "topic1", "test context of topic1", user1, now, null, 0, 0, user1, now));
         postService.save(new PostEntity(sessionService.findByName("教师答疑"), "topic2", "test context of topic2", user1, now, null, 0, 0, user1, now));
         postService.save(new PostEntity(sessionService.findByName("教师答疑"), "topic3", "test context of topic3", user1, now, null, 0, 0, user1, now));

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,11 +28,12 @@ public class PostController {
     UserService userService;
 
     //创建帖子
+    //返回值：帖子序号
     @RequestMapping(value = "bbs/post/create")
-    public PostEntity createPost(@RequestBody Post p)
+    public Integer createPost(@RequestBody Post p)
     {
         PostEntity postEntity = new PostEntity();
-        postEntity.setSession(sessionService.findByName(p.getSname()));
+        postEntity.setSession(sessionService.getOne(p.getSession_sid().toString()));
         postEntity.setTopic(p.getTopic());
         postEntity.setContent(p.getContent());
         postEntity.setCreator(userService.findByName("user1"));
@@ -41,7 +43,7 @@ public class PostController {
         postEntity.setLastReplier(userService.findByName("user1"));
         postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
         postService.save(postEntity);
-        return postEntity;
+        return postEntity.getPid();
     }
     //查询某用户帖子
     @RequestMapping(value = "/bbs/post/user/{uid}")
@@ -51,11 +53,17 @@ public class PostController {
         return postEntities;
     }
     //查询某版块帖子
-    @RequestMapping(value = "/bbs/post/session/{sname}")
-    public List<PostEntity> sessionPost(@PathVariable String sname){
-        SessionEntity s = sessionService.findByName(sname);
+    @RequestMapping(value = "/bbs/post/session/{sid}")
+    public List<Post> sessionPost(@PathVariable String sid){
+        SessionEntity s = sessionService.findBySid(sid);
         List<PostEntity> postEntities = s.getPostEntities();
-        return postEntities;
+        List<Post> posts = new ArrayList<>();
+        for(PostEntity pe: postEntities)
+        {
+           Post p = pe.getPost();
+           posts.add(p);
+        }
+        return posts;
     }
     @RequestMapping(value = "/topic/{sid}")
     public List<PostEntity> dispTopic(@PathVariable String sid){

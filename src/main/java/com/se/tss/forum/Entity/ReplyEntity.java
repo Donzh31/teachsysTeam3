@@ -1,6 +1,7 @@
 package com.se.tss.forum.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.se.tss.forum.Models.Reply;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -70,5 +71,16 @@ public class ReplyEntity {
 
     public void setReplyTime(Timestamp replyTime) {
         this.replyTime = replyTime;
+    }
+
+    public Reply getReply()
+    {
+        Reply reply = new Reply();
+        reply.setRid(rid);
+        reply.setContent(content);
+        reply.setReply_time(replyTime);
+        reply.setCreator_uid(creator.getUid());
+        reply.setCreator_uname(creator.getName());
+        return reply;
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SessionService extends JpaRepository<SessionEntity, String> {
     SessionEntity findByName(String name);
+    SessionEntity findBySid(String sid);
 
 }
 
