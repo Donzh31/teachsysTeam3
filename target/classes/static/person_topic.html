@@ -38,6 +38,14 @@
                 console.warn("There has no param value!");
             }
         };
+        var switchTime = function (fortime) {
+            var newdate = fortime.split("T")[0];
+            var newtime1 = fortime.split("T")[1];
+            var newtime2 = newtime1.split(".")[0];
+            var newtime = newdate+" "+newtime2;
+            return newtime;
+
+        };
         /**
          * 页面加载完毕打印键值对对象
          */
@@ -48,6 +56,8 @@
             var url2 = "/bbs/reply/user/" + param.tuserid;
             var id1 = "topiclists";
             var id2 = "replylists";
+            var id3 = "msglink";
+            document.getElementById(id3).innerHTML="<a href=\"online_chat.html?tuserid="+param.tuserid+"\" class=\"greenbtn publish\">私信TA</a>";
             var request1 = new XMLHttpRequest();/*用new创建一个XHR对象*/
             request1.open("GET",url1);/*设置XHR对象的请求方法与路径*/
             request1.send(null);/*设置XHR对象不发送数据到服务器*/
@@ -59,11 +69,12 @@
                     for (i in myObj1) {
                         x1 += "<tr>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_10\"><a href=\"topic.html?pid="+myObj1[i].pid+"\">"+myObj1[i].topic+"</a></td>\n" +
-                            "                <td class=\"t_9\">"+myObj1[i].create_time+"</td>\n" +
-                            "                <td class=\"t_9\">"+myObj1[i].last_reply_time+"</td>\n" +
+                            "                <td class=\"t_9\">"+switchTime(myObj1[i].create_time)+"</td>\n" +
+                            "                <td class=\"t_9\">"+switchTime(myObj1[i].last_reply_time)+"</td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
 
                     }
+
                     document.getElementById(id1).innerHTML = x1;
                 }
 
@@ -80,7 +91,7 @@
                         x2 += "<tr>\n" +
                             "          <td class=\"t_7\"><a href=\"topic.html?pid="+myObj2[i].pid+"\">"+myObj2[i].topic+"</a></td>\n" +
                             "          <td class=\"t_11\">"+myObj2[i].reply_content+"</td>\n" +
-                            "          <td class=\"t_3\">"+myObj2[i].reply_time+"</td>\n" +
+                            "          <td class=\"t_3\">"+switchTime(myObj2[i].reply_time)+"</td>\n" +
                             "  </tr>"
 
                     }
@@ -132,8 +143,8 @@
 
 <div class="Content_home" style="min-height:380px">
     <div class="space25"></div>
-    <div class="operateBtn">
-        <a href="online_chat.html" class="greenbtn publish">私信TA</a>
+    <div class="operateBtn" id="msglink">
+        <a href="online_chat.html?tuserid=" class="greenbtn publish">私信TA</a>
     </div>
     <div>
         <h2>TA的主题帖</h2>

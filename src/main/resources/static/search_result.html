@@ -40,6 +40,14 @@
                 console.warn("There has no param value!");
             }
         };
+        var switchTime = function (fortime) {
+            var newdate = fortime.split("T")[0];
+            var newtime1 = fortime.split("T")[1];
+            var newtime2 = newtime1.split(".")[0];
+            var newtime = newdate+" "+newtime2;
+            return newtime;
+
+        };
         /**
          * 页面加载完毕打印键值对对象
          */
@@ -60,7 +68,7 @@
                         x += "<tr>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + myObj[i].creator_uname + "</td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\"topic.html?pid="+myObj[i].pid+"\">"+myObj[i].topic+"</a></td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+myObj[i].last_reply_time+"</td>\n" +
+                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+switchTime(myObj[i].last_reply_time)+"</td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
 
                     }

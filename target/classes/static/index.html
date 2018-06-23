@@ -20,6 +20,15 @@
             get_notice_list("/bbs/notice/all", "notice_list");
         }
 
+        var switchTime = function (fortime) {
+            var newdate = fortime.split("T")[0];
+            var newtime1 = fortime.split("T")[1];
+            var newtime2 = newtime1.split(".")[0];
+            var newtime = newdate+" "+newtime2;
+            return newtime;
+
+        };
+
         function get_topic_list(url, id)
         {
             var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
@@ -31,7 +40,7 @@
                     myObj = eval('('+ request.responseText +')');
                     for (i in myObj) {
                         console.log(i);
-                        x += "<li><span>" + myObj[i].create_time + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
+                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
                 }
@@ -49,7 +58,7 @@
                     myObj = eval('('+ request.responseText +')');
                     for (i in myObj) {
                         console.log(i);
-                        x += "<li><span>" + myObj[i].create_time + "</span><a href=\"notice.html?pid=" + myObj[i].nid + "\">" + myObj[i].topic + "</a></li>"
+                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"notice.html?pid=" + myObj[i].nid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
                 }

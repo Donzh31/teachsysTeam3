@@ -388,3 +388,110 @@ a:hover {
 .defaultTable .btn a.modify:hover { background: #fe990b; color: #fff;}
 .defaultTable .btn a.delete:hover { background: #f23e47; color: #fff;}
 .defaultTable .btn a.Top.toping { background: #00843e; color: #fff;}
+
+.col-l-t {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    background: -ms-linear-gradient(top, #cae0e1 0%, #e2faee 100%);
+    background: -moz-linear-gradient(top, #cae0e1 0%, #e2faee 100%);
+    background: -webkit-linear-gradient(top, #cae0e1 0%, #e2faee 100%);
+    *background: #d6d6d6;
+}
+.col-l-b {
+    border-top: 1px solid #ccc;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 199px;
+}
+.col-l-t .content {
+    padding: 2%;
+}
+
+.bubble {
+    position: relative;
+}
+.msg {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 60px;
+}
+
+.msg .article {
+    float: left;
+    display: inline-block;
+    *display:inline;
+    zoom: 1;
+    padding: 12px;
+    border-radius: 12px;
+    min-width: 50px;
+    min-height: 20px;
+    background: #fff;
+    max-width: 80%;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.fr .article {
+    margin-top: auto;
+    margin-bottom: 8px;
+    color: #fff;
+    background: #479a97;
+    float: right;
+    margin-right: 0px;
+}
+
+.fl .article {
+    float: left;
+    margin-left: 0px;
+}
+.faq-input {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ececec;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+}
+.faq-input-content {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.faq-input-content .input {
+    border-style: none;
+    font-size: 18px;
+    width: 98%;
+    overflow: hidden;
+    padding: 1%;
+    height: 100px;
+    line-height: 20px;
+}
+.faq-input-content .btn {
+    line-height: 35px;
+    width: 120px;
+    position: relative;
+    right: 10px;
+    border-style: none;
+    font-size: 16px;
+    color: #fff;
+    bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #34999a;
+}
