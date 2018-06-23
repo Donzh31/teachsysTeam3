@@ -1,6 +1,7 @@
 package com.se.tss.forum.Controller;
 
 import com.se.tss.forum.Entity.NoticeEntity;
+import com.se.tss.forum.Entity.PostEntity;
 import com.se.tss.forum.Entity.ReplyEntity;
 import com.se.tss.forum.Models.Notice;
 import com.se.tss.forum.Models.Reply;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +35,14 @@ public class ReplyController {
     @RequestMapping(value = "bbs/reply/create")
     public Reply createNotice(@RequestBody Reply r) {
         ReplyEntity replyEntity = new ReplyEntity();
+        PostEntity postEntity = postService.findByPid(r.getPid());
+        Timestamp replyTime = new Timestamp(System.currentTimeMillis());
         replyEntity.setCreator(userService.findByName("user1"));//userService.findByUid(r.getCreator_uid()));
         replyEntity.setContent(r.getReply_content());
-        replyEntity.setReplyTime(new Timestamp(System.currentTimeMillis()));
-        replyEntity.setPost(postService.findByPid(r.getPid()));
+        replyEntity.setReplyTime(replyTime);
+        replyEntity.setPost(postEntity);
+        postEntity.setLastReplyTime(replyTime);
+        postService.save(postEntity);
         replyService.save(replyEntity);
         r.setRid(replyEntity.getRid());
         return r;
