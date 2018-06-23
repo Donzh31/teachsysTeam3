@@ -87,14 +87,18 @@
                     myObj = eval('('+ request.responseText +')');
 
                     for (i in myObj) {
-                        if(type=="notice")
+                        if(type=="notice") {
                             tmpid = myObj[i].nid;
-                        else
+                            tmptime = myObj[i].modified_time
+                        }
+                        else {
                             tmpid = myObj[i].pid;
+                            tmptime = myObj[i].last_reply_time
+                        }
                         x += "<tr>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + myObj[i].creator_uname + "</td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\""+type+".html?pid="+ tmpid +"\">"+myObj[i].topic+"</a></td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+myObj[i].modified_time+"</td>\n" +
+                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+tmptime+"</td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_4\"><div class=\"btn\"><input type=\"button\" value=\"删除\" class=\"delete\" onclick=\"delete"+type+"("+i+")\"></div></td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
 
@@ -115,6 +119,7 @@
             request.send(null);/*设置XHR对象不发送数据到服务器*/
             request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
                 if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
+
                     alert(request.responseText);
                     window.location.href = thisUrl;
                 }
@@ -134,10 +139,10 @@
             request.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
                 if(request.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
                     alert(request.responseText);
+                    window.location.href = thisUrl;
                 }
                 else{
                     alert("删除失败，网络错误！");
-                    window.location.href = thisUrl;
                 }
 
             }
@@ -189,7 +194,7 @@
         <a href="topic_post.html" class="greenbtn publish">发布帖子</a>
         <a href="notice_post.html" class="greenbtn publish">发布公告</a>
     </div>
-    <div class="Mian-cont-wrap">
+    <div class="Mian-cont-wrap" style="min-height:380px">
         <div class="defaultTab-T">
             <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
                 <tbody><tr id="tablehead"><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">发帖时间</th><th class="t_4">操作</th></tr>

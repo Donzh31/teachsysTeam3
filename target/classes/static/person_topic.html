@@ -13,8 +13,6 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
@@ -47,7 +45,7 @@
             param = getParam();
             console.log(param);
             var url1 = "/bbs/post/user/" + param.tuserid;
-            var url2 = "/bbd/reply/user/" + param.tuserid;
+            var url2 = "/bbs/reply/user/" + param.tuserid;
             var id1 = "topiclists";
             var id2 = "replylists";
             var request1 = new XMLHttpRequest();/*用new创建一个XHR对象*/
@@ -55,18 +53,18 @@
             request1.send(null);/*设置XHR对象不发送数据到服务器*/
             request1.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
                 if(request1.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
-                    var i, x = "";
-                    myObj1 = eval('('+ request2.responseText +')');
-
+                    var i, x1 = "";
+                    myObj1 = eval('('+ request1.responseText +')');
+                    console.log(myObj1);
                     for (i in myObj1) {
-                        x += "<tr>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + "发帖人2" + "</td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\"topic.html?pid="+myObj1[i].pid+"\">"+myObj1[i].topic+"</a></td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+myObj1[i].lastReplyTime+"</td>\n" +
+                        x1 += "<tr>\n" +
+                            "\t\t\t\t\t\t\t\t<td class=\"t_10\"><a href=\"topic.html?pid="+myObj1[i].pid+"\">"+myObj1[i].topic+"</a></td>\n" +
+                            "                <td class=\"t_9\">"+myObj1[i].create_time+"</td>\n" +
+                            "                <td class=\"t_9\">"+myObj1[i].last_reply_time+"</td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
 
                     }
-                    document.getElementById(id2).innerHTML = x;
+                    document.getElementById(id1).innerHTML = x1;
                 }
 
             }
@@ -75,18 +73,18 @@
             request2.send(null);/*设置XHR对象不发送数据到服务器*/
             request2.onload = function() {/*设置当获XHR对象获取到返回信息后执行以下代码*/
                 if(request2.status == 200) {/*如果返回的状态为200，即为成功获取数据*/
-                    var i, x = "";
+                    var i, x2 = "";
                     myObj2 = eval('('+ request2.responseText +')');
-
+                    console.log(myObj2);
                     for (i in myObj2) {
-                        x += "<tr>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + "发帖人2" + "</td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\"topic.html?pid="+myObj2[i].pid+"\">"+myObj2[i].topic+"</a></td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+myObj2[i].lastReplyTime+"</td>\n" +
-                            "\t\t\t\t\t\t\t</tr>";
+                        x2 += "<tr>\n" +
+                            "          <td class=\"t_7\"><a href=\"topic.html?pid="+myObj2[i].pid+"\">"+myObj2[i].topic+"</a></td>\n" +
+                            "          <td class=\"t_11\">"+myObj2[i].reply_content+"</td>\n" +
+                            "          <td class=\"t_3\">"+myObj2[i].reply_time+"</td>\n" +
+                            "  </tr>"
 
                     }
-                    document.getElementById(id2).innerHTML = x;
+                    document.getElementById(id2).innerHTML = x2;
                 }
 
             }
@@ -132,7 +130,7 @@
     </div>
 </div>
 
-<div class="Content_home">
+<div class="Content_home" style="min-height:380px">
     <div class="space25"></div>
     <div class="operateBtn">
         <a href="topic_post.html" class="greenbtn publish">私信TA</a>
@@ -143,51 +141,33 @@
     <div class="Mian-cont-wrap">
         <div class="defaultTab-T">
             <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
-                <tbody><tr><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">最后回复时间</th></tr>
+                <tbody><tr><th class="t_10">帖子标题</th><th class="t_9">发布时间</th><th class="t_9">最后回复时间</th></tr>
                 </tbody></table>
         </div>
         <table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
             <tbody id="topiclists">
             <tr>
-                <td class="t_1">发帖人</td>
-                <td class="t_2"><a href="topic.html">帖子1</a></td>
-                <td class="t_3">时间</td>
+                <td class="t_10"><a href="topic.html">帖子标题</a></td>
+                <td class="t_9">发布时间</td>
+                <td class="t_9">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人5</td>
-                <td class="t_2"><a href="topic.html">帖子5</a></td>
-                <td class="t_3">时间5</td>
+                <td class="t_10"><a href="topic.html">帖子标题</a></td>
+                <td class="t_9">发布时间</td>
+                <td class="t_9">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人6</td>
-                <td class="t_2"><a href="topic.html">帖子6</a></td>
-                <td class="t_3">时间6</td>
+                <td class="t_10"><a href="topic.html">帖子标题</a></td>
+                <td class="t_9">发布时间</td>
+                <td class="t_9">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人7</td>
-                <td class="t_2"><a href="topic.html">帖子7</a></td>
-                <td class="t_3">时间7</td>
+                <td class="t_10"><a href="topic.html">帖子标题</a></td>
+                <td class="t_9">发布时间</td>
+                <td class="t_9">回复时间</td>
             </tr>
-            <tr>
-                <td class="t_1">发帖人8</td>
-                <td class="t_2"><a href="topic.html">帖子8</a></td>
-                <td class="t_3">时间8</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
+
+
             </tbody>
         </table>
         <!--pages S-->
@@ -202,50 +182,40 @@
     <div class="Mian-cont-wrap">
         <div class="defaultTab-T">
             <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
-                <tbody><tr><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">最后回复时间</th></tr>
+                <tbody><tr><th class="t_7">帖子标题</th><th class="t_11">回复内容</th><th class="t_3">回复时间</th></tr>
                 </tbody></table>
         </div>
         <table border="0" cellspacing="0" cellpadding="0" class="defaultTable defaultTable2">
             <tbody id="replylists">
             <tr>
-                <td class="t_1">发帖人</td>
-                <td class="t_2"><a href="topic.html">帖子1</a></td>
-                <td class="t_3">时间</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人5</td>
-                <td class="t_2"><a href="topic.html">帖子5</a></td>
-                <td class="t_3">时间5</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人6</td>
-                <td class="t_2"><a href="topic.html">帖子6</a></td>
-                <td class="t_3">时间6</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人7</td>
-                <td class="t_2"><a href="topic.html">帖子7</a></td>
-                <td class="t_3">时间7</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人8</td>
-                <td class="t_2"><a href="topic.html">帖子8</a></td>
-                <td class="t_3">时间8</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
+                <td class="t_7"><a href="topic.html">帖子1</a></td>
+                <td class="t_11">回复内容</td>
+                <td class="t_3">回复时间</td>
             </tr>
             </tbody>
         </table>

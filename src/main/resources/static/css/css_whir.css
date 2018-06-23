@@ -376,6 +376,8 @@ a:hover {
 .defaultTable .t_7 { width: 35%; text-align: left;}
 .defaultTable .t_8 { width: 20%; text-align: left;}
 .defaultTable .t_9 { width: 20%; text-align: center;}
+.defaultTable .t_10 { width: 60%; text-align: left;}
+.defaultTable .t_11 { width: 50%; text-align: left;}
 .defaultTable .t_2_1 { width: 30%; text-align: left;}
 .defaultTable tr:hover { background: #fafafa;}
 .defaultTable .btn a { display: inline-block; padding: 0 9px; height: 21px; line-height: 21px; color: #fff; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; margin: 0 2%;}

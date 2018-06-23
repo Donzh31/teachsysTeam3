@@ -58,7 +58,7 @@
 
                     for (i in myObj) {
                         x += "<tr>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + "发帖人2" + "</td>\n" +
+                            "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + myObj[i].creator_uname + "</td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\"topic.html?pid="+myObj[i].pid+"\">"+myObj[i].topic+"</a></td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+myObj[i].last_reply_time+"</td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
@@ -116,7 +116,7 @@
     <div>
         <h2>搜索结果</h2>
     </div>
-    <div class="Mian-cont-wrap">
+    <div class="Mian-cont-wrap" style="min-height:380px">
         <div class="defaultTab-T">
             <table border="0" cellspacing="0" cellpadding="0" class="defaultTable">
                 <tbody><tr><th class="t_1">发帖人</th><th class="t_2">帖子标题</th><th class="t_3">最后回复时间</th></tr>
@@ -149,21 +149,7 @@
                 <td class="t_2"><a href="topic.html">帖子8</a></td>
                 <td class="t_3">时间8</td>
             </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
-            <tr>
-                <td class="t_1">发帖人9</td>
-                <td class="t_2"><a href="topic.html">帖子9</a></td>
-                <td class="t_3">时间9</td>
-            </tr>
+
             </tbody>
         </table>
         <!--pages S-->
@@ -174,7 +160,7 @@
 <div class="space25"></div>
 <div class="Footer">
     <div class="box">
-        <div class="txt">教务管理系统<!--br />医院电话： 020-12345678 传真： 020-12345678 粤ICP备00000000号--></div>
+        <div class="txt">教务管理系统</div>
         <dl>Copyright 2018 All Rights Reserved © by SETeam3</dl>
     </div>
 </div>
