@@ -58,8 +58,8 @@ public class InitialController {
         noticeService.save(new NoticeEntity(user1, "notice 1", "test content of notice 1", now, now));
         noticeService.save(new NoticeEntity(user1, "notice 2", "test content of notice 2", now, now));
         noticeService.save(new NoticeEntity(user1, "notice 3", "test content of notice 3", now, now));
-        messageService.save(new MessageEntity(user1, userService.findByName("user2"), "hello", "a hello message from user1", now));
-        messageService.save(new MessageEntity(userService.findByName("user2"), user1, "hello", "a hello message from user2", now));
+        messageService.save(new MessageEntity(user1, userService.findByName("user2"),  "a hello message from user1", now));
+        messageService.save(new MessageEntity(userService.findByName("user2"), user1,  "a hello message from user2", now));
         return "initial successfully";
     }
 

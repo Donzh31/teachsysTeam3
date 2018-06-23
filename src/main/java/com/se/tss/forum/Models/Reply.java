@@ -16,7 +16,7 @@ public class Reply {
     private String post_ptopic;
     private Integer creator_uid;
     private String creator_uname;
-*/
+    */
     public Reply() {
     }
     public Integer getPid() {
