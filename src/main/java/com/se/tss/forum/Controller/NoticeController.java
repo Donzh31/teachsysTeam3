@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+import static com.se.tss.forum.TimeManager.getBeijingTime;
 
 //@CrossOrigin
 @RestController
@@ -24,6 +23,7 @@ public class NoticeController {
     @Autowired
     NoticeService noticeService;
     //创建公告
+    //传入值：topic content creator_uid
     //返回值：新建公告的序号
     @RequestMapping(value = "bbs/notice/create")
     public Notice createNotice(@RequestBody Notice n)
@@ -32,12 +32,13 @@ public class NoticeController {
         noticeEntity.setTopic(n.getTopic());
         noticeEntity.setContent(n.getContent());
         noticeEntity.setCreateTime(getBeijingTime());
-        noticeEntity.setCreator(userService.findByName("user1"));
+        noticeEntity.setCreator(userService.findByUid(n.getCreator_uid()));
         noticeEntity.setModifiedTime(getBeijingTime());
         noticeService.save(noticeEntity);
         n.setNid(noticeEntity.getNid());
         return n;
     }
+
     //查询所有公告
     //返回：所有公告列表
     @RequestMapping(value = "/bbs/notice/all")
@@ -52,6 +53,7 @@ public class NoticeController {
         }
         return notices;
     }
+
     //查询特定公告详细信息
     @RequestMapping(value = "/bbs/notice/find/{nid}")
     public Notice specPost(@PathVariable Integer nid){
@@ -59,6 +61,7 @@ public class NoticeController {
         Notice n = ne.getNotice();
         return  n;
     }
+
     //删除公告
     //公告ID，删除者ID
     @RequestMapping(value = "/bbs/notice/delete/{nid}/{uid}")

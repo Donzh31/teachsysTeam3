@@ -10,13 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.servlet.http.HttpServletRequest;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+import static com.se.tss.forum.TimeManager.getBeijingTime;
 
 //@CrossOrigin
 @RestController
@@ -29,6 +26,7 @@ public class PostController {
     UserService userService;
 
     //创建帖子
+    //传入值：session_sid topic content creator_uid
     //返回值：帖子序号
     @RequestMapping(value = "bbs/post/create")
     public Post createPost(@RequestBody Post p)
@@ -37,11 +35,11 @@ public class PostController {
         postEntity.setSession(sessionService.findBySid(p.getSession_sid()));
         postEntity.setTopic(p.getTopic());
         postEntity.setContent(p.getContent());
-        postEntity.setCreator(userService.findByName("user1"));
+        postEntity.setCreator(userService.findByUid(p.getCreator_uid()));
         postEntity.setCreateTime(getBeijingTime());
         postEntity.setClickCount(0);
         postEntity.setReplyCount(0);
-        postEntity.setLastReplier(userService.findByName("user1"));
+        postEntity.setLastReplier(userService.findByUid(p.getCreator_uid()));
         postEntity.setLastReplyTime(getBeijingTime());
         postService.save(postEntity);
         p.setPid(postEntity.getPid());

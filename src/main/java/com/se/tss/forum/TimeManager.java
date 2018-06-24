@@ -1,4 +1,4 @@
-package com.se.tss.forum.Controller;
+package com.se.tss.forum;
 
 import java.sql.Timestamp;
 import java.util.Calendar;

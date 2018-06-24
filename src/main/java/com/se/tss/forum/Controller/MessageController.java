@@ -1,10 +1,10 @@
 package com.se.tss.forum.Controller;
 
 import com.se.tss.forum.Entity.MessageEntity;
+import com.se.tss.forum.Entity.UserEntity;
 import com.se.tss.forum.Models.Message;
 import com.se.tss.forum.Service.MessageService;
 import com.se.tss.forum.Service.PostService;
-import com.se.tss.forum.Service.ReplyService;
 import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+import static com.se.tss.forum.TimeManager.getBeijingTime;
 
 //@CrossOrigin
 @RestController
@@ -41,9 +40,11 @@ public class MessageController {
         return m;
     }
     //得到某用户相关私信
-    @RequestMapping(value = "/bbs/message/all/{uid}")
-    public List<Message> searchPost(@PathVariable Integer uid){
-        List<MessageEntity> messageEntities = messageService.findBySenderOrReceiverOrderBySendTime(userService.findByUid(uid),userService.findByUid(uid));
+    @RequestMapping(value = "/bbs/message/all/{uid1}/{uid2}")
+    public List<Message> searchPost(@PathVariable Integer uid1, @PathVariable Integer uid2){
+        UserEntity u1 = userService.findByUid(uid1);
+        UserEntity u2 = userService.findByUid(uid2);
+        List<MessageEntity> messageEntities = messageService.findBySenderAndReceiverOrSenderAndReceiverOrderBySendTime(u1, u2, u2, u1);
         List<Message> messages = new ArrayList<>();
         for(MessageEntity me: messageEntities)
         {
