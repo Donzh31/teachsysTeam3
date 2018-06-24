@@ -14,6 +14,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+
 //@CrossOrigin
 @RestController
 public class NoticeController {
@@ -29,9 +31,9 @@ public class NoticeController {
         NoticeEntity noticeEntity = new NoticeEntity();
         noticeEntity.setTopic(n.getTopic());
         noticeEntity.setContent(n.getContent());
-        noticeEntity.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        noticeEntity.setCreateTime(getBeijingTime());
         noticeEntity.setCreator(userService.findByName("user1"));
-        noticeEntity.setModifiedTime(new Timestamp(System.currentTimeMillis()));
+        noticeEntity.setModifiedTime(getBeijingTime());
         noticeService.save(noticeEntity);
         n.setNid(noticeEntity.getNid());
         return n;

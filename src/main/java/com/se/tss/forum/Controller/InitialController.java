@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Calendar;
+
+import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
 
 @CrossOrigin
 @RestController
@@ -33,7 +37,7 @@ public class InitialController {
         userService.save(new UserEntity("user1", "user1", null, null, null, null, null, null));
         userService.save(new UserEntity("user2", "user2", null, null, null, null, null, null));
         UserEntity user1 = userService.findByName("user1");
-        Timestamp now = new Timestamp(System.currentTimeMillis());
+        Timestamp now = getBeijingTime();
         sessionService.save(new SessionEntity("S001","教师答疑", "您在课程、作业上遇到的问题，可以在本版块向老师提问", 0, 0,null));
         sessionService.save(new SessionEntity("S002","心灵之约", "您在生活、情感上遇到的问题，可以在本版块进行吐槽", 0, 0,null));
         sessionService.save(new SessionEntity("S003","开怀一笑", "您在任何地方发现的一些欢乐，不放在本版块分享给大家", 0, 0,null));

@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface MessageService extends JpaRepository<MessageEntity, String> {
-    List<MessageEntity> findBySenderOrReceiverOrderBySendTimeDesc(UserEntity u1, UserEntity u2);
+    List<MessageEntity> findBySenderOrReceiverOrderBySendTime(UserEntity u1, UserEntity u2);
 }

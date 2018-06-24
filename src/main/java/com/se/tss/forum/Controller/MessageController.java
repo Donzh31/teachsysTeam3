@@ -16,6 +16,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+
 //@CrossOrigin
 @RestController
 public class MessageController {
@@ -33,7 +35,7 @@ public class MessageController {
         messageEntity.setSender(userService.findByUid(m.getSender_id()));
         messageEntity.setReceiver(userService.findByUid(m.getReceiver_id()));
         messageEntity.setMessage(m.getMessage());
-        messageEntity.setSendTime(new Timestamp(System.currentTimeMillis()));
+        messageEntity.setSendTime(getBeijingTime());
         messageService.save(messageEntity);
         m.setMid(messageEntity.getMid());
         return m;
@@ -41,7 +43,7 @@ public class MessageController {
     //得到某用户相关私信
     @RequestMapping(value = "/bbs/message/all/{uid}")
     public List<Message> searchPost(@PathVariable Integer uid){
-        List<MessageEntity> messageEntities = messageService.findBySenderOrReceiverOrderBySendTimeDesc(userService.findByUid(uid),userService.findByUid(uid));
+        List<MessageEntity> messageEntities = messageService.findBySenderOrReceiverOrderBySendTime(userService.findByUid(uid),userService.findByUid(uid));
         List<Message> messages = new ArrayList<>();
         for(MessageEntity me: messageEntities)
         {

@@ -20,6 +20,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+
 //@CrossOrigin
 @RestController
 public class ReplyController {
@@ -36,7 +38,7 @@ public class ReplyController {
     public Reply createNotice(@RequestBody Reply r) {
         ReplyEntity replyEntity = new ReplyEntity();
         PostEntity postEntity = postService.findByPid(r.getPid());
-        Timestamp replyTime = new Timestamp(System.currentTimeMillis());
+        Timestamp replyTime = getBeijingTime();
         replyEntity.setCreator(userService.findByName("user1"));//userService.findByUid(r.getCreator_uid()));
         replyEntity.setContent(r.getReply_content());
         replyEntity.setReplyTime(replyTime);

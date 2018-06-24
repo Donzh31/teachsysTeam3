@@ -16,6 +16,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.se.tss.forum.Controller.TimeManager.getBeijingTime;
+
 //@CrossOrigin
 @RestController
 public class PostController {
@@ -36,11 +38,11 @@ public class PostController {
         postEntity.setTopic(p.getTopic());
         postEntity.setContent(p.getContent());
         postEntity.setCreator(userService.findByName("user1"));
-        postEntity.setCreateTime(new Timestamp(System.currentTimeMillis()));
+        postEntity.setCreateTime(getBeijingTime());
         postEntity.setClickCount(0);
         postEntity.setReplyCount(0);
         postEntity.setLastReplier(userService.findByName("user1"));
-        postEntity.setLastReplyTime(new Timestamp(System.currentTimeMillis()));
+        postEntity.setLastReplyTime(getBeijingTime());
         postService.save(postEntity);
         p.setPid(postEntity.getPid());
         return p;
