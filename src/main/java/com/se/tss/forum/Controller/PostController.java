@@ -3,9 +3,9 @@ import com.se.tss.forum.Entity.PostEntity;
 import com.se.tss.forum.Entity.SessionEntity;
 import com.se.tss.forum.Models.Post;
 import com.se.tss.forum.Models.Reply;
+import com.se.tss.forum.Service.ForumUserService;
 import com.se.tss.forum.Service.PostService;
 import com.se.tss.forum.Service.SessionService;
-import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +23,7 @@ public class PostController {
     @Autowired
     PostService postService;
     @Autowired
-    UserService userService;
+    ForumUserService userService;
 
     //创建帖子
     //传入值：session_sid topic content creator_uid

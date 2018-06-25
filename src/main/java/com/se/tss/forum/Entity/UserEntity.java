@@ -1,6 +1,6 @@
 package com.se.tss.forum.Entity;
 
-import com.se.tss.forum.Models.User;
+import com.se.tss.forum.Models.ForumUser;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -120,9 +120,9 @@ public class UserEntity {
     public void setNoticeEntities(List<NoticeEntity> noticeEntities) {
         this.noticeEntities = noticeEntities;
     }
-    public User getUser()
+    public ForumUser getUser()
     {
-        User u = new User(uid, name, authority);
+        ForumUser u = new ForumUser(uid, name, authority);
         return u;
     }
 }

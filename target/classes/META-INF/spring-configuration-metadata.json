@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.se.tss.infomgr.config.UploadConfig",
+      "name": "kira",
+      "type": "com.se.tss.infomgr.config.UploadConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.se.tss.infomgr.config.UploadConfig",
+      "name": "kira.upload-path",
+      "type": "java.lang.String"
+    }
+  ]
+}

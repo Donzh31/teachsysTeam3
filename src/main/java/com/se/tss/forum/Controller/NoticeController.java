@@ -19,7 +19,7 @@ import static com.se.tss.forum.TimeManager.getBeijingTime;
 @RestController
 public class NoticeController {
     @Autowired
-    UserService userService;
+    ForumUserService userService;
     @Autowired
     NoticeService noticeService;
     //创建公告

@@ -14,7 +14,7 @@ import java.util.Calendar;
 @RestController
 public class InitialController {
     @Autowired
-    UserService userService;
+    ForumUserService userService;
     @Autowired
     SessionService sessionService;
     @Autowired

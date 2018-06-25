@@ -3,9 +3,9 @@ package com.se.tss.forum.Controller;
 import com.se.tss.forum.Entity.PostEntity;
 import com.se.tss.forum.Entity.ReplyEntity;
 import com.se.tss.forum.Models.Reply;
+import com.se.tss.forum.Service.ForumUserService;
 import com.se.tss.forum.Service.PostService;
 import com.se.tss.forum.Service.ReplyService;
-import com.se.tss.forum.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +26,7 @@ public class ReplyController {
     @Autowired
     PostService postService;
     @Autowired
-    UserService userService;
+    ForumUserService userService;
 
     //创建回帖
     //传入值：pid, uid, reply_content

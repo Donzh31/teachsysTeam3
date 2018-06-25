@@ -5,7 +5,7 @@ import com.se.tss.forum.Entity.UserEntity;
 import com.se.tss.forum.Models.Message;
 import com.se.tss.forum.Service.MessageService;
 import com.se.tss.forum.Service.PostService;
-import com.se.tss.forum.Service.UserService;
+import com.se.tss.forum.Service.ForumUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +25,7 @@ public class MessageController {
     @Autowired
     PostService postService;
     @Autowired
-    UserService userService;
+    ForumUserService userService;
     //创建私信
     //传入：sender_id receiver_id message
     @RequestMapping(value = "bbs/message/create")
