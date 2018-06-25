@@ -161,13 +161,13 @@
                         console.log(redata.session_sid);
                         if(redata.session_sid=='S001') {
                             console.log('success');
-                            $(location).attr('href', 'http://localhost:8080/sindex.html?sid=1');
+                            $(location).attr('href', 'http://localhost:8080/sindex.html?uid='+param.uid+'&sid=1');
                             console.log('fail');
                         }
                         else if(redata.session_sid=='S002')
-                            $(location).attr('href', 'http://localhost:8080/sindex.html?sid=2');
+                            $(location).attr('href', 'http://localhost:8080/sindex.html?uid='+param.uid+'&sid=2');
                         else if(redata.session_sid=='S003')
-                            $(location).attr('href', 'http://localhost:8080/sindex.html?sid=3');
+                            $(location).attr('href', 'http://localhost:8080/sindex.html?uid='+param.uid+'&sid=3');
                     } else {
                         alert('失败，请重试!');
                     }
