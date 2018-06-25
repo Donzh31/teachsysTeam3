@@ -12,12 +12,37 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <script type="text/javascript">
+        var param;
+        var getParam = function () {
+            try{
+                var url = window.location.href;
+                var result = url.split("?")[1];
+                console.log(result);
+                console.log(url.split("?"));
+                var keyValue = result.split("&");
+                var obj = {};
+                for (var i = 0; i<keyValue.length; i++) {
+                    var item = keyValue[i].split("=");
+                    obj[item[0]] = item[1];
+                }
+                return obj;}catch(e){
+                console.warn("There has no param value!");
+            }
+        };
         window.onload = function() { /*设置在页面加载完后执行以下js代码*/
+            param = getParam();
             get_topic_list("/bbs/post/session/S001", "topic_list1");
             get_topic_list("/bbs/post/session/S002", "topic_list2");
             get_topic_list("/bbs/post/session/S003", "topic_list3");
             get_topic_list("/bbs/post/hot", "hot_list");
             get_notice_list("/bbs/notice/all", "notice_list");
+            var headbar="<li id=\"nav1\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=1\">教师答疑</a></span></li>\n" +
+                "            <li id=\"nav2\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=2\">心灵之约</a></span></li>\n" +
+                "            <li id=\"nav3\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=3\">开怀一笑</a></span></li>\n" +
+                "            <li id=\"nav4\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=4\">论坛公告</a></span></li>\n";
+            document.getElementById("headtoolbar").innerHTML=headbar;
+            var indexalink = "<a href=\"forumindex.html?uid="+param.uid+"\"><img src=\"images/Forlogo.png\" /></a>";
+            document.getElementById("indexlink").innerHTML = indexalink;
         }
 
         var switchTime = function (fortime) {
@@ -40,9 +65,11 @@
                     myObj = eval('('+ request.responseText +')');
                     for (i in myObj) {
                         console.log(i);
-                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"topic.html?pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
+                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"topic.html?uid="+param.uid+"&pid=" + myObj[i].pid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
+
+
                 }
 
             }
@@ -58,7 +85,7 @@
                     myObj = eval('('+ request.responseText +')');
                     for (i in myObj) {
                         console.log(i);
-                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"notice.html?pid=" + myObj[i].nid + "\">" + myObj[i].topic + "</a></li>"
+                        x += "<li><span>" + switchTime(myObj[i].create_time) + "</span><a href=\"notice.html?uid="+param.uid+"&pid=" + myObj[i].nid + "\">" + myObj[i].topic + "</a></li>"
                     }
                     document.getElementById(id).innerHTML = x;
                 }
@@ -70,7 +97,7 @@
         {
 
             var objA=document.getElementById("searchbtn");
-            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+            objA.href="search_result.html?uid="+param.uid+"&keyword="+document.getElementById("searchtext").value;
         }
     </script>
 </head>
@@ -79,13 +106,13 @@
 <!--top-->
 
 <div class="header">
-    <h1 class="logo"><a href="index.html"><img src="images/Forlogo.png" /></a></h1>
+    <h1 class="logo" id="indexlink"><a href="forumindex.html"><img src="images/Forlogo.png" /></a></h1>
     <div class="frCont">
         <a href="#">教务管理系统</a><div id = "S1"></div>
     </div>
     <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
-        <ul>
+        <ul id="headtoolbar">
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
             <li id="nav2"><span><a href="sindex.html?sid=2">心灵之约</a></span></li>
             <li id="nav3"><span><a href="sindex.html?sid=3">开怀一笑</a></span></li>
@@ -95,8 +122,8 @@
             <li id="nav6"><span><a href="sindex.html">版块6</a></span></li>
             <li id="nav7"><span><a href="sindex.html">版块7</a></span></li>
             <li id="nav8"><span><a href="sindex.html">版块8</a></span></li>
-            <li id="nav9"><span><a href="index.html">版块9</a></span></li>
-            <li id="nav10"><span><a href="index.html">版块10</a></span></li-->
+            <li id="nav9"><span><a href="forumindex.html">版块9</a></span></li>
+            <li id="nav10"><span><a href="forumindex.html">版块10</a></span></li-->
         </ul>
     </div>
 </div>
@@ -108,9 +135,9 @@
     <div class="H_adBox">
         <div class="photo">
             <ul>
-                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">公告 白衣天使遇上儿童节</a></span></li>
-                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">领先的整合IT服务提供商</a></span></li>
-                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">公告 白衣天使遇上儿童节</a></span></li>
+                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">公告 </a></span></li>
+                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">领先</a></span></li>
+                <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">公告</a></span></li>
                 <li><a href="#"><img src="images/temp/Pic04.jpg" /></a><span><a href="#">提供商</a></span></li>
             </ul>
         </div>

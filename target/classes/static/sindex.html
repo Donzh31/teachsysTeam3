@@ -59,20 +59,20 @@
             var id = "topiclist";
             var type = "";
             var tablehead = "";
-            if(param.sid == 1) {
+            if(param.sid == "1") {
                 tablehead = "<th class=\"t_1\">发帖人</th><th class=\"t_2\">帖子标题</th><th class=\"t_3\">最后回复时间</th><th class=\"t_4\">操作</th>";
                 url += "post/session/S001";
                 type = "topic";
                 jQuery("#nav1").attr("class","onnav");
                 //console.log(url);
             }
-            else if(param.sid == 2) {
+            else if(param.sid == "2") {
                 tablehead = "<th class=\"t_1\">发帖人</th><th class=\"t_2\">帖子标题</th><th class=\"t_3\">最后回复时间</th><th class=\"t_4\">操作</th>";
                 url += "post/session/S002";
                 type = "topic";
                 jQuery("#nav2").attr("class","onnav");
             }
-            else if(param.sid == 3) {
+            else if(param.sid == "3") {
                 tablehead = "<th class=\"t_1\">发帖人</th><th class=\"t_2\">帖子标题</th><th class=\"t_3\">最后回复时间</th><th class=\"t_4\">操作</th>";
                 url += "post/session/S003";
                 type = "topic";
@@ -105,7 +105,7 @@
                         }
                         x += "<tr>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_1\">" + myObj[i].creator_uname + "</td>\n" +
-                            "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\""+type+".html?pid="+ tmpid +"\">"+myObj[i].topic+"</a></td>\n" +
+                            "\t\t\t\t\t\t\t\t<td class=\"t_2\"><a href=\""+type+".html?uid="+param.uid+"&pid="+ tmpid +"\">"+myObj[i].topic+"</a></td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_3\">"+switchTime(tmptime)+"</td>\n" +
                             "\t\t\t\t\t\t\t\t<td class=\"t_4\"><div class=\"btn\"><input type=\"button\" value=\"删除\" class=\"delete\" onclick=\"delete"+type+"("+i+")\"></div></td>\n" +
                             "\t\t\t\t\t\t\t</tr>";
@@ -115,11 +115,21 @@
                 }
 
             }
+            var headbar="<li id=\"nav1\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=1\">教师答疑</a></span></li>\n" +
+                "            <li id=\"nav2\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=2\">心灵之约</a></span></li>\n" +
+                "            <li id=\"nav3\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=3\">开怀一笑</a></span></li>\n" +
+                "            <li id=\"nav4\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=4\">论坛公告</a></span></li>\n";
+            document.getElementById("headtoolbar").innerHTML=headbar;
+            var indexalink = "<a href=\"forumindex.html?uid="+param.uid+"\"><img src=\"images/Forlogo.png\" /></a>";
+            document.getElementById("indexlink").innerHTML = indexalink;
+            var postalink = "<a href=\"topic_post.html?uid="+param.uid+"\" class=\"greenbtn publish\">发布帖子</a>\n" +
+                "        <a href=\"notice_post.html?uid="+param.uid+"\" class=\"greenbtn publish\">发布公告</a>\n";
+            document.getElementById("postlink").innerHTML = postalink;
 
         }
 
         function deletetopic(listid){
-            var url = "/bbs/post/delete/" + myObj[listid].pid +"/"+ myObj[listid].creator_uid;
+            var url = "/bbs/post/delete/" + myObj[listid].pid +"/"+ param.uid;
             var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
             console.log(listid);
             console.log(url);
@@ -138,7 +148,7 @@
             }
         }
         function deletenotice(listid){
-            var url = "/bbs/notice/delete/" + myObj[listid].nid +"/"+ myObj[listid].creator_uid;
+            var url = "/bbs/notice/delete/" + myObj[listid].nid +"/"+ param.uid;
             var request = new XMLHttpRequest();/*用new创建一个XHR对象*/
             console.log(listid);
             console.log(url);
@@ -160,7 +170,7 @@
         {
 
             var objA=document.getElementById("searchbtn");
-            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+            objA.href="search_result.html?uid="+param.uid+"&keyword="+document.getElementById("searchtext").value;
         }
 
     </script>
@@ -170,7 +180,7 @@
 <body>
 <!--top-->
 <div class="header">
-    <h1 class="logo"><a href="index.html"><img src="images/Forlogo.png" /></a></h1>
+    <h1 class="logo" id="indexlink"><a href="forumindex.html"><img src="images/Forlogo.png" /></a></h1>
     <div class="frCont">
         <!--dl><a href="#">职业卫生</a><a href="#">院长信箱</a><a href="#">加入收藏</a></--dl-->
         <a href="#">教务管理系统</a>
@@ -179,7 +189,7 @@
     </div>
     <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
-        <ul>
+        <ul id="headtoolbar">
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
             <li id="nav2"><span><a href="sindex.html?sid=2">心灵之约</a></span></li>
             <li id="nav3"><span><a href="sindex.html?sid=3">开怀一笑</a></span></li>
@@ -189,8 +199,8 @@
             <li id="nav6"><span><a href="sindex.html">版块6</a></span></li>
             <li id="nav7"><span><a href="sindex.html">版块7</a></span></li>
             <li id="nav8"><span><a href="sindex.html">版块8</a></span></li>
-            <li id="nav9"><span><a href="index.html">版块9</a></span></li>
-            <li id="nav10"><span><a href="index.html">版块10</a></span></li-->
+            <li id="nav9"><span><a href="forumindex.html">版块9</a></span></li>
+            <li id="nav10"><span><a href="forumindex.html">版块10</a></span></li-->
         </ul>
     </div>
 </div>
@@ -198,7 +208,7 @@
 <div class="Content_home">
     <div class="space25"></div>
 
-    <div class="operateBtn">
+    <div class="operateBtn" id="postlink">
         <a href="topic_post.html" class="greenbtn publish">发布帖子</a>
         <a href="notice_post.html" class="greenbtn publish">发布公告</a>
     </div>

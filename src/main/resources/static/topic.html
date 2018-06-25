@@ -75,7 +75,7 @@
                         x+= "<div class=\"space10\"></div>"+
                             "<div class=\"Content\" style=\"min-height:130px\">\n" +
                             "    <div class=\"Sidebar\">\n" +
-                            "        <h3 align=\"center\"><a href=\"person_topic.html?tuserid="+myObj[i].uid+"\">"+myObj[i].uname+"</a></h3>\n" +
+                            "        <h3 align=\"center\"><a href=\"person_topic.html?uid="+param.uid+"&tuserid="+myObj[i].uid+"\">"+myObj[i].uname+"</a></h3>\n" +
                             "        <div class=\"clear\"></div>\n" +
                             "    </div>\n" +
                             "    <div class=\"RightSidebar\">\n" +
@@ -94,6 +94,13 @@
                 }
 
             }
+            var headbar="<li id=\"nav1\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=1\">教师答疑</a></span></li>\n" +
+                "            <li id=\"nav2\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=2\">心灵之约</a></span></li>\n" +
+                "            <li id=\"nav3\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=3\">开怀一笑</a></span></li>\n" +
+                "            <li id=\"nav4\"><span><a href=\"sindex.html?uid="+param.uid+"&sid=4\">论坛公告</a></span></li>\n";
+            document.getElementById("headtoolbar").innerHTML=headbar;
+            var indexalink = "<a href=\"forumindex.html?uid="+param.uid+"\"><img src=\"images/Forlogo.png\" /></a>";
+            document.getElementById("indexlink").innerHTML = indexalink;
 
         }
 
@@ -101,7 +108,7 @@
         {
 
             var objA=document.getElementById("searchbtn");
-            objA.href="search_result.html?keyword="+document.getElementById("searchtext").value;
+            objA.href="search_result.html?uid="+param.uid+"&keyword="+document.getElementById("searchtext").value;
         }
     </script>
 
@@ -109,7 +116,7 @@
 <body>
 <!--top-->
 <div class="header">
-    <h1 class="logo"><a href="index.html"><img src="images/Forlogo.png" /></a></h1>
+    <h1 class="logo" id="indexlink"><a href="forumindex.html"><img src="images/Forlogo.png" /></a></h1>
     <div class="frCont">
         <!--dl><a href="#">职业卫生</a><a href="#">院长信箱</a><a href="#">加入收藏</a></--dl-->
         <a href="#">教务管理系统</a>
@@ -118,7 +125,7 @@
     </div>
     <div class="search"><input id="searchtext" name="searchtext" type="text" class="text" value=""/><a id="searchbtn" href="" class="btn" onclick="addsearchKey()"></a></div>
     <div class="mainnav">
-        <ul>
+        <ul id="headtoolbar">
             <li id="nav1"><span><a href="sindex.html?sid=1">教师答疑</a></span></li>
             <li id="nav2"><span><a href="sindex.html?sid=2">心灵之约</a></span></li>
             <li id="nav3"><span><a href="sindex.html?sid=3">开怀一笑</a></span></li>
@@ -128,8 +135,8 @@
             <li id="nav6"><span><a href="sindex.html">版块6</a></span></li>
             <li id="nav7"><span><a href="sindex.html">版块7</a></span></li>
             <li id="nav8"><span><a href="sindex.html">版块8</a></span></li>
-            <li id="nav9"><span><a href="index.html">版块9</a></span></li>
-            <li id="nav10"><span><a href="index.html">版块10</a></span></li-->
+            <li id="nav9"><span><a href="forumindex.html">版块9</a></span></li>
+            <li id="nav10"><span><a href="forumindex.html">版块10</a></span></li-->
         </ul>
     </div>
 </div>
@@ -247,6 +254,7 @@
         //data.topic = myObj[1].topic;
         data.reply_content = $content.val();
         data.pid = param.pid;
+        data.uid = param.uid;
         console.log("success");
         console.log(data);
         $.ajax({
